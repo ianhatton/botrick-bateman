@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express'),
       app = express(),
+      path = require('path'),
       port = process.env.PORT || 8080,
       Snoostorm = require('snoostorm'),
       Snoowrap = require('snoowrap');
@@ -91,6 +92,10 @@ comments.on('comment', comment => {
 // submissions.on('submission', submission => {
 //     console.log('New submission: ', submission.title);
 // });
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.listen(port, () => {
     console.log(`Our app is running on port ${port}`);
