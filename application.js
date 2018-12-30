@@ -163,6 +163,8 @@ const readComment = (comment) => {
 };
 
 const replyToComment = (comment, reply) => {
+    reply = `${reply}    ***    ^(I'm a bot)`;
+
     comment.reply(reply);
 }
 
