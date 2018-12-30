@@ -1,6 +1,9 @@
 require('dotenv').config();
 
-const Snoostorm = require('snoostorm'),
+const express = require('express'),
+      app = express(),
+      port = process.env.PORT || 8080,
+      Snoostorm = require('snoostorm'),
       Snoowrap = require('snoowrap');
 
 // Local
@@ -85,6 +88,10 @@ comments.on('comment', comment => {
     readComment(comment);
 });
 
-submissions.on('submission', submission => {
-    // console.log('New submission: ', submission.title);
+// submissions.on('submission', submission => {
+//     console.log('New submission: ', submission.title);
+// });
+
+app.listen(port, () => {
+    console.log(`Our app is running on port ${port}`);
 });
