@@ -42,7 +42,7 @@ const replies = {
     'gym': [
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
-        'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes',
+        'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
         'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
         'No hardbodies at the gym today. Only faggots from the West Side, probably unemployed actors, waiters by night, and Muldwyn Butner of Sachs, who I went to Exeter with, over at the biceps curl machine.',
         'Two thousand abdominal crunches and thirty minutes of rope jumping in the living room, the Wurlitzer jukebox blasting “The Lion Sleeps Tonight” over and over, even though I worked out in the gym today for close to two hours.'
@@ -91,7 +91,7 @@ const replyToComment = (comment, reply) => {
 }
 
 comments.on('comment', comment => {
-    if (comment.author_fullname !== 'botrickbateman') {
+    if (comment.author.name !== 'botrickbateman') {
         readComment(comment);
     }
 });
