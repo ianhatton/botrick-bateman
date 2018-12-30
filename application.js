@@ -3,12 +3,21 @@ require('dotenv').config();
 const Snoostorm = require('snoostorm'),
       Snoowrap = require('snoowrap');
 
+// Local
+// const snoowrap = new Snoowrap({
+//     clientId: process.env.CLIENT_ID,
+//     clientSecret: process.env.CLIENT_SECRET,
+//     password: process.env.REDDIT_PASS,
+//     userAgent: 'botrick-bateman',
+//     username: process.env.REDDIT_USER
+// });
+
 const snoowrap = new Snoowrap({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    password: process.env.REDDIT_PASS,
+    clientId: os.environ['CLIENT_ID'],
+    clientSecret: os.environ['CLIENT_SECRET'],
+    password: os.environ['REDDIT_PASS'],
     userAgent: 'botrick-bateman',
-    username: process.env.REDDIT_USER
+    username: os.environ['REDDIT_USER']
 });
 
 const client = new Snoostorm(snoowrap),
@@ -59,11 +68,18 @@ const readComment = (comment) => {
         if (comment.body.includes(key)) {
           const reply = getReply(key);
 
-          console.log('reply', reply);
+          if (reply) {
+              replyToComment(comment, reply);
+          }
+
           break;
         }
     }
 };
+
+const replyToComment = (comment, reply) => {
+    comment.reply(reply);
+}
 
 comments.on('comment', comment => {
     readComment(comment);
