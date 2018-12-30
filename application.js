@@ -63,6 +63,9 @@ const replies = {
     'dwarf': [
         '*The Patty Winters Show* this morning was about a new sport called Dwarf Tossing.'
     ],
+    'genesis?': [
+        'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
+    ],
     'gym': [
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
@@ -90,7 +93,7 @@ const replies = {
         'I fork a piece of monkfish, push it into some of the golden caviar, then place the fork back down.'
     ],
     'mousse': [
-        '“Hello, Halberstam,” Owen says, walking by.    “Hello, Owen,” I say, admiring the way he’s styled and slicked back his hair, with a part so even and sharp it... devastates me and I make a mental note to ask him where he purchases his hair-care products, which kind of mousse he uses, my final guess after mulling over the possibilities being Ten -X.'
+        '“Hello, Halberstam,” Owen says, walking by.\n“Hello, Owen,” I say, admiring the way he’s styled and slicked back his hair, with a part so even and sharp it... devastates me and I make a mental note to ask him where he purchases his hair-care products, which kind of mousse he uses, my final guess after mulling over the possibilities being Ten -X.'
     ],
     'nazis': [
         '*The Patty Winters Show* this morning was about Nazis and, inexplicably, I got a real charge out of watching it. Though I wasn’t exactly charmed by their deeds, I didn’t find them unsympathetic either, nor I might add did most of the members of the audience. One of the Nazis, in a rare display of humor, even juggled grapefruits and, delighted, I sat up in bed and clapped.'
@@ -100,7 +103,7 @@ const replies = {
     ],
     'pepsi': [
         'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
-        '“Listen. I’ll be daring,” Anne says finally. “I’ll have a Diet Coke with rum.”    Scott sighs, then smiles, beaming really. “Good.”    “That’s a caffeine-fine Diet Coke, right?” Anne asks the waiter.    “You know,” I interrupt, “you should have it with Diet Pepsi. It’s much better.”    “Really?” Anne asks. “What do you mean?”    “You should have the Diet Pepsi instead of the Diet Coke,” I say. “It’s much better. It’s fizzier. It has a cleaner taste. It mixes better with rum and has a lower sodium content.”'
+        '“Listen. I’ll be daring,” Anne says finally. “I’ll have a Diet Coke with rum.”\nScott sighs, then smiles, beaming really. “Good.”\n“That’s a caffeine-fine Diet Coke, right?” Anne asks the waiter.\n“You know,” I interrupt, “you should have it with Diet Pepsi. It’s much better.”\n“Really?” Anne asks. “What do you mean?”\n“You should have the Diet Pepsi instead of the Diet Coke,” I say. “It’s much better. It’s fizzier. It has a cleaner taste. It mixes better with rum and has a lower sodium content.”'
     ],
     'perfume': [
         '*The Patty Winters Show* this morning was about Perfumes and Lipsticks and Makeups.'
@@ -163,7 +166,7 @@ const readComment = (comment) => {
 };
 
 const replyToComment = (comment, reply) => {
-    // reply = `${reply}    ***    ^(I'm a bot)`;
+    reply = `${reply}\n___\n^(I'm a bot)`;
 
     comment.reply(reply);
 }
