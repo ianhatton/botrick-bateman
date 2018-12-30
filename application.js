@@ -4,21 +4,21 @@ const Snoostorm = require('snoostorm'),
       Snoowrap = require('snoowrap');
 
 // Local
-// const snoowrap = new Snoowrap({
-//     clientId: process.env.CLIENT_ID,
-//     clientSecret: process.env.CLIENT_SECRET,
-//     password: process.env.REDDIT_PASS,
-//     userAgent: 'botrick-bateman',
-//     username: process.env.REDDIT_USER
-// });
-
 const snoowrap = new Snoowrap({
-    clientId: os.environ['CLIENT_ID'],
-    clientSecret: os.environ['CLIENT_SECRET'],
-    password: os.environ['REDDIT_PASS'],
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    password: process.env.REDDIT_PASS,
     userAgent: 'botrick-bateman',
-    username: os.environ['REDDIT_USER']
+    username: process.env.REDDIT_USER
 });
+
+// const snoowrap = new Snoowrap({
+//     clientId: os.environ['CLIENT_ID'],
+//     clientSecret: os.environ['CLIENT_SECRET'],
+//     password: os.environ['REDDIT_PASS'],
+//     userAgent: 'botrick-bateman',
+//     username: os.environ['REDDIT_USER']
+// });
 
 const client = new Snoostorm(snoowrap),
       streamOptions = {
