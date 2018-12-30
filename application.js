@@ -86,7 +86,9 @@ const replyToComment = (comment, reply) => {
 }
 
 comments.on('comment', comment => {
-    readComment(comment);
+    if (comment.author_fullname !== 'botrickbateman') {
+        readComment(comment);
+    }
 });
 
 // submissions.on('submission', submission => {
