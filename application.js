@@ -33,14 +33,23 @@ const client = new Snoostorm(snoowrap),
       submissions = client.SubmissionStream(streamOptions);
 
 const replies = {
+    'aerobic exercise': [
+        '*The Patty Winters Show* this morning was about Aerobic Exercise.'
+    ],
     'aftershave': [
         'You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin.'
     ],
     'armani': [
         'I pull my Armani shirt up and place her hand on my torso, wanting her to feel how rock-hard, how *halved* my stomach is, and I flex the muscles, grateful it’s light in the room so she can see how bronzed and defined my abdomen has become.'
     ],
+    'aspirin': [
+        '*The Patty Winters Show* this morning was Aspirin: Can It Save Your Life?'
+    ],
     'butner': [
         'Butner is wearing a pair of knee-length nylon and Lycra shorts with checkerboard inserts and a cotton and Lycra tank top and leather Reeboks.'
+    ],
+    'caviar': [
+        'I fork a piece of monkfish, push it into some of the golden caviar, then place the fork back down.'
     ],
     'cheesecake': [
         '“Cheesecake?” I say, confused by this plain, alien-sounding list. “What sauce or fruits were on the roasted chicken? What shapes was it cut into?”'
@@ -50,6 +59,9 @@ const replies = {
     ],
     'dorsia': [
         'I stop looking through the Zagat guide and without glancing up, smiling tightly, stomach dropping, I silently ask myself, Do I really want to say no? Do I really want to say I can’t possibly get us in? Is that what I’m really prepared to do? Is that what I really want to do?'
+    ],
+    'dwarf': [
+        '*The Patty Winters Show* this morning was about a new sport called Dwarf Tossing.'
     ],
     'gym': [
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
@@ -62,18 +74,33 @@ const replies = {
     'huey lewis': [
         'Huey Lewis and the News burst out of San Francisco onto the national music scene at the beginning of the decade, with their self-titled rock pop album released by Chrysalis, though they really didn’t come into their own, commercially or artistically, until their 1983 smash, Sports.'
     ],
+    'lesbians': [
+        'On *The Patty Winters Show* this morning the topic was Beautiful Teenage Lesbians, which I found so erotic I had to stay home, miss a meeting, jerk off twice.'
+    ],
+    'letterman': [
+        'I check my Rolex and realize that if we have one drink, maybe two, I’ll get home in time for *Late Night with David Letterman*.'
+    ],
     'lipstick': [
         '*The Patty Winters Show* this morning was about Perfumes and Lipsticks and Makeups.'
     ],
     'makeup': [
         '*The Patty Winters Show* this morning was about Perfumes and Lipsticks and Makeups.'
     ],
+    'monkfish': [
+        'I fork a piece of monkfish, push it into some of the golden caviar, then place the fork back down.'
+    ],
     'mousse': [
-        '“Hello, Halberstam,” Owen says, walking by.  “Hello, Owen,” I say, admiring the way he’s styled and slicked back his hair, with a part so even and sharp it... devastates me and I make a mental note to ask him where he purchases his hair-care products, which kind of mousse he uses, my final guess after mulling over the possibilities being Ten -X.'
+        '“Hello, Halberstam,” Owen says, walking by.    “Hello, Owen,” I say, admiring the way he’s styled and slicked back his hair, with a part so even and sharp it... devastates me and I make a mental note to ask him where he purchases his hair-care products, which kind of mousse he uses, my final guess after mulling over the possibilities being Ten -X.'
+    ],
+    'nazis': [
+        '*The Patty Winters Show* this morning was about Nazis and, inexplicably, I got a real charge out of watching it. Though I wasn’t exactly charmed by their deeds, I didn’t find them unsympathetic either, nor I might add did most of the members of the audience. One of the Nazis, in a rare display of humor, even juggled grapefruits and, delighted, I sat up in bed and clapped.'
+    ],
+    'nuclear war': [
+        '*The Patty Winters Show* this morning was about the possibility of nuclear war, and according to the panel of experts the odds are pretty good it will happen sometime within the next month.'
     ],
     'pepsi': [
         'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
-        '“Listen. I’ll be daring,” Anne says finally. “I’ll have a Diet Coke with rum.”  Scott sighs, then smiles, beaming really. “Good.”  “That’s a caffeine-fine Diet Coke, right?” Anne asks the waiter.  “You know,” I interrupt, “you should have it with Diet Pepsi. It’s much better.”  “Really?” Anne asks. “What do you mean?”  “You should have the Diet Pepsi instead of the Diet Coke,” I say. “It’s much better. It’s fizzier. It has a cleaner taste. It mixes better with rum and has a lower sodium content.”'
+        '“Listen. I’ll be daring,” Anne says finally. “I’ll have a Diet Coke with rum.”    Scott sighs, then smiles, beaming really. “Good.”    “That’s a caffeine-fine Diet Coke, right?” Anne asks the waiter.    “You know,” I interrupt, “you should have it with Diet Pepsi. It’s much better.”    “Really?” Anne asks. “What do you mean?”    “You should have the Diet Pepsi instead of the Diet Coke,” I say. “It’s much better. It’s fizzier. It has a cleaner taste. It mixes better with rum and has a lower sodium content.”'
     ],
     'perfume': [
         '*The Patty Winters Show* this morning was about Perfumes and Lipsticks and Makeups.'
@@ -82,11 +109,29 @@ const replies = {
         'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
         'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
     ],
+    'princess diana': [
+        '*The Patty Winters Show* today was—ironically, I thought—about Princess Di’s beauty tips.'
+    ],
     'rambo': [
         '*The Patty Winters Show* this morning was about Real-Life Rambos.'
     ],
+    'salad': [
+        '*The Patty Winters Show* this morning was about Salad Bars.'
+    ],
     'scallop': [
         'Van Patten has the scallop sausage and the grilled salmon with raspberry vinegar and guacamole. The air-conditioning in the restaurant is on full blast and I\’m beginning to feel bad that I\’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.'
+    ],
+    'shark attack': [
+        '*The Patty Winters Show* this morning was about Shark Attack Victims.'
+    ],
+    'soap': [
+        '*The Patty Winters Show* this morning was about a boy who fell in love with a box of soap.'
+    ],
+    'swayze': [
+        '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?'
+    ],
+    'talking animals': [
+        'Talking animals were the topic of this morning’s *Patty Winters Show*. An octopus was floating in a makeshift aquarium with a microphone attached to one of its tentacles and it kept asking—or so its “trainer,” who is positive that mollusks have vocal cords, assured us—for “cheese.” I watched, vaguely transfixed, until I started to sob.'
     ],
     'ufo': [
         '*The Patty Winters Show* this morning was about UFOs That Kill.'
