@@ -23,7 +23,12 @@ const client = new Snoostorm(snoowrap),
       comments = client.CommentStream(streamOptions),
       submissions = client.SubmissionStream(streamOptions);
 
-const commentReplies = [
+const generalReplies = [
+    'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
+    'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
+];
+
+const initialReplies = [
     'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
     '“Hi. Pat Bateman,” I say, offering my hand, noticing my reflection in a mirror hung on the wall—and smiling at how good I look.',
     'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
@@ -31,12 +36,7 @@ const commentReplies = [
     'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
 ];
 
-const generalReplies = [
-    'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
-    'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
-];
-
-const inboxReplies = {
+const engagedReplies = {
     'beatles': [
         'When I’m moving down Broadway to meet Jean, my secretary, for brunch, in front of Tower Records a college student with a clipboard asks me to name the saddest song I know. I tell him, without pausing, “You Can’t Always Get What You Want” by the Beatles. Then he asks me to name the happiest song I know, and I say “Brilliant Disguise” by Bruce Springsteen.'
     ],
@@ -120,8 +120,15 @@ const triggerWords = [
     'botrickbateman',
     'bret easton ellis',
     'business card',
-    'dorsia'
+    'dorsia',
+    'huey lewis'
 ]
+
+const postReply = (comment, reply) => {
+    reply = `${reply}\n___\n^(*I am a bot*)`;
+
+    comment.reply(reply);
+}
 
 const readComment = (comment) => {
     if (comment.author.name === 'botrickbateman') {
@@ -130,11 +137,9 @@ const readComment = (comment) => {
 
     for (let triggerWord of triggerWords) {
         if (comment.body.includes(triggerWord)) {
-            const reply = getReply(commentReplies);
+            const reply = getReply(initialReplies);
 
-            if (reply) {
-                replyToComment(comment, reply);
-            }
+            postReply(comment, reply);            
 
             break;
         }
@@ -144,13 +149,11 @@ const readComment = (comment) => {
 const readInboxComment = (comment) => {
     let reply;
 
-    for (let key of Object.keys(inboxReplies)) {
+    for (let key of Object.keys(engagedReplies)) {
         if (comment.body.includes(key)) {
-            reply = getReply(inboxReplies[key]);
+            reply = getReply(engagedReplies[key]);
    
-            if (reply) {
-                replyToComment(comment, reply);
-            }
+            postReply(comment, reply);            
    
             break;
         }
@@ -159,15 +162,21 @@ const readInboxComment = (comment) => {
     // if (!reply) {
     //     reply = getReply(generalReplies);
 
-    //     replyToComment(comment, reply);
+    //     postReply(comment, reply);
     // }
 };
 
-const replyToComment = (comment, reply) => {
-    reply = `${reply}\n___\n^(I'm a bot)`;
+const readSubmission = (submission) => {
+    for (let triggerWord of triggerWords) {
+        if (submission.title.includes(triggerWord)) {
+            const reply = getReply(initialReplies);
 
-    comment.reply(reply);
-}
+            postReply(submission, reply);            
+
+            break;
+        }
+    }
+};
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -181,9 +190,9 @@ comments.on('comment', comment => {
     readComment(comment);
 });
 
-// submissions.on('submission', submission => {
-//     console.log('New submission: ', submission.title);
-// });
+submissions.on('submission', submission => {
+    readSubmission(submission);
+});
 
 setInterval(() => {
     const getUnreadMessages = snoowrap.getUnreadMessages();
