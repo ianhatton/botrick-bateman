@@ -31,9 +31,21 @@ const generalReplies = [
 const initialReplies = [
     'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
     '“Hi. Pat Bateman,” I say, offering my hand, noticing my reflection in a mirror hung on the wall—and smiling at how good I look.',
+    'I am wearing a minihoundstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
+    'I flossed too hard this morning and I can still taste the coppery residue of swallowed blood in the back of my throat. I used Listerine afterwards and my mouth feels like it’s on fire but I manage a smile to no one as I step out of the elevator, brushing past a hung-over Wittenborn, swinging my new black leather attaché case from Bottega Veneta.',
     'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
+    'I take the ice-pack mask off and use a deep-pore cleanser lotion, then an herb-mint facial masque which I leave on for ten minutes while I check my toenails.',
+    'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
     'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
-    'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
+    'I’m wearing a four-button double-breasted wool and silk suit, a cotton shirt with a button-down collar by Valentino Couture, a patterned silk tie by Armani and cap-toed leather slipons by Allen-Edmonds.',
+    'I’m wearing a lightweight linen suit with pleated trousers, a cotton shirt, a dotted silk tie, all by Valentino Couture, and perforated cap-toe leather shoes by Allen-Edmonds.',
+    'I’m wearing a two-button singlebreasted chalk-striped wool-flannel suit, a multicolored candy-striped cotton shirt and a silk pocket square, all by Patrick Aubert, a polka-dot silk tie by Bill Blass and clear prescription eyeglasses with frames by Lafont Paris.',
+    'I’m wearing a two-button wool suit with pleated trousers by Luciano Soprani, a cotton shirt by Brooks Brothers and a silk tie by Armani.',
+    'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.',
+    'In bed I’m wearing Ralph Lauren silk pajamas and when I get up I slip on a paisley ancient madder robe and walk to the bathroom. I urinate while trying to make out the puffiness of my reflection in the glass that encases a baseball poster hung above the toilet. After I change into Ralph Lauren monogrammed boxer shorts and a Fair Isle sweater and slide into silk polka-dot Enrico Hidolin slippers I tie a plastic ice pack around my face and commence with the morning’s stretching exercises.',
+    'The air-conditioning in the restaurant is on full blast and I’m beginning to feel bad that I’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.',
+    'The shoes I’m wearing are crocodile loafers by A. Testoni.',
+    'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.'
 ];
 
 const engagedReplies = {
@@ -125,7 +137,7 @@ const triggerWords = [
 ]
 
 const postReply = (comment, reply) => {
-    reply = `${reply}\n___\n^(*I am a bot*)`;
+    reply = `${reply}\n___\n^(*I am a bot. I have an eight-thirty reservation tonight at Dorsia.*)`;
 
     comment.reply(reply);
 }
@@ -146,14 +158,14 @@ const readComment = (comment) => {
     }
 };
 
-const readInboxComment = (comment) => {
+const readUnreadMessage = (message) => {
     let reply;
 
     for (let key of Object.keys(engagedReplies)) {
-        if (comment.body.includes(key)) {
+        if (message.body.includes(key)) {
             reply = getReply(engagedReplies[key]);
    
-            postReply(comment, reply);            
+            postReply(message, reply);            
    
             break;
         }
@@ -168,7 +180,7 @@ const readInboxComment = (comment) => {
 
 const readSubmission = (submission) => {
     for (let triggerWord of triggerWords) {
-        if (submission.title.includes(triggerWord)) {
+        if (submission.selftext.includes(triggerWord) || submission.title.includes(triggerWord)) {
             const reply = getReply(initialReplies);
 
             postReply(submission, reply);            
@@ -199,7 +211,7 @@ setInterval(() => {
 
     getUnreadMessages.then((messages) => {
         messages.forEach(message => {
-            readInboxComment(message);
+            readUnreadMessage(message);
             snoowrap.markMessagesAsRead([message.name]);
         });
     });
