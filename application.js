@@ -24,37 +24,29 @@ const client = new Snoostorm(snoowrap),
       submissions = client.SubmissionStream(streamOptions);
 
 const generalReplies = [
+    'As I set the platter down I catch a glimpse of my reflection on the surface of the table. My skin seems darker because of the candlelight and I notice how good the haircut I got at Gio’s last Wednesday looks. I make myself another drink. I worry about the sodium level in the soy sauce.',
     'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
+    '“Hi. Pat Bateman,” I say, offering my hand, noticing my reflection in a mirror hung on the wall—and smiling at how good I look.',
+    'I flossed too hard this morning and I can still taste the coppery residue of swallowed blood in the back of my throat. I used Listerine afterwards and my mouth feels like it’s on fire but I manage a smile to no one as I step out of the elevator, brushing past a hung-over Wittenborn, swinging my new black leather attaché case from Bottega Veneta.',
+    'I pass by a mirror hung over the bar as I’m led to our table and check out my reflection—the mousse looks good.',
+    'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
+    'I take the ice-pack mask off and use a deep-pore cleanser lotion, then an herb-mint facial masque which I leave on for ten minutes while I check my toenails.',
+    'I’m in the men’s room, staring at myself in the mirror—tan and haircut perfect—checking out my teeth which are completely straight and white and gleaming.',
+    'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.',
     'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
 ];
 
-const initialReplies = [
-    'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
-    '“Hi. Pat Bateman,” I say, offering my hand, noticing my reflection in a mirror hung on the wall—and smiling at how good I look.',
-    'I am wearing a minihoundstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
-    'I flossed too hard this morning and I can still taste the coppery residue of swallowed blood in the back of my throat. I used Listerine afterwards and my mouth feels like it’s on fire but I manage a smile to no one as I step out of the elevator, brushing past a hung-over Wittenborn, swinging my new black leather attaché case from Bottega Veneta.',
-    'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
-    'I take the ice-pack mask off and use a deep-pore cleanser lotion, then an herb-mint facial masque which I leave on for ten minutes while I check my toenails.',
-    'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
-    'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
-    'I’m wearing a four-button double-breasted wool and silk suit, a cotton shirt with a button-down collar by Valentino Couture, a patterned silk tie by Armani and cap-toed leather slipons by Allen-Edmonds.',
-    'I’m wearing a lightweight linen suit with pleated trousers, a cotton shirt, a dotted silk tie, all by Valentino Couture, and perforated cap-toe leather shoes by Allen-Edmonds.',
-    'I’m wearing a two-button singlebreasted chalk-striped wool-flannel suit, a multicolored candy-striped cotton shirt and a silk pocket square, all by Patrick Aubert, a polka-dot silk tie by Bill Blass and clear prescription eyeglasses with frames by Lafont Paris.',
-    'I’m wearing a two-button wool suit with pleated trousers by Luciano Soprani, a cotton shirt by Brooks Brothers and a silk tie by Armani.',
-    'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.',
-    'In bed I’m wearing Ralph Lauren silk pajamas and when I get up I slip on a paisley ancient madder robe and walk to the bathroom. I urinate while trying to make out the puffiness of my reflection in the glass that encases a baseball poster hung above the toilet. After I change into Ralph Lauren monogrammed boxer shorts and a Fair Isle sweater and slide into silk polka-dot Enrico Hidolin slippers I tie a plastic ice pack around my face and commence with the morning’s stretching exercises.',
-    'The air-conditioning in the restaurant is on full blast and I’m beginning to feel bad that I’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.',
-    'The shoes I’m wearing are crocodile loafers by A. Testoni.',
-    'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.'
-];
-
-const engagedReplies = {
+const specificReplies = {
+    'bad bot': [
+        'I’m sorry I insulted the pizzas at Pastels. Happy?'
+    ],
     'beatles': [
         'When I’m moving down Broadway to meet Jean, my secretary, for brunch, in front of Tower Records a college student with a clipboard asks me to name the saddest song I know. I tell him, without pausing, “You Can’t Always Get What You Want” by the Beatles. Then he asks me to name the happiest song I know, and I say “Brilliant Disguise” by Bruce Springsteen.'
     ],
     'business card': [
         'I’m looking at Van Patten’s card and then at mine and cannot believe that Price actually likes Van Patten’s better.\nDizzy, I sip my drink then take a deep breath.',
-        '“New card.” I try to act casual about it but I’m smiling proudly. “What do you think?”\n“Whoa,” McDermott says, lifting it up, fingering the card, genuinely impressed. “Very nice. Take a look.” He hands it to Van Patten.\n“Picked them up from the printer’s yesterday,” I mention.\n“Cool coloring,” Van Patten says, studying the card closely.\n“That’s bone,” I point out. “And the lettering is something called Silian Rail.”'
+        '“New card.” I try to act casual about it but I’m smiling proudly. “What do you think?”\n“Whoa,” McDermott says, lifting it up, fingering the card, genuinely impressed. “Very nice. Take a look.” He hands it to Van Patten.\n“Picked them up from the printer’s yesterday,” I mention.\n“Cool coloring,” Van Patten says, studying the card closely.\n“That’s bone,” I point out. “And the lettering is something called Silian Rail.”',
+        'The maître d’ stops by to say hello to McDermott, then notices we don’t have our complimentary Bellinis, and runs off before any of us can stop him. I’m not sure how McDermott knows Alain so well—maybe Cecelia?—and it slightly pisses me off but I decide to even up the score a little bit by showing everyone my new business card. I pull it out of my gazelleskin wallet (Barney’s, $850) and slap it on the table, waiting for reactions.'
     ],
     'cologne': [
         'You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin.'
@@ -78,6 +70,9 @@ const engagedReplies = {
     'genesis': [
         'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
     ],
+    'good bot': [
+        'Your compliment was sufficient.'
+    ],
     'gym': [
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
@@ -87,10 +82,11 @@ const engagedReplies = {
         'Two thousand abdominal crunches and thirty minutes of rope jumping in the living room, the Wurlitzer jukebox blasting “The Lion Sleeps Tonight” over and over, even though I worked out in the gym today for close to two hours.'
     ],
     'huey lewis': [
-        'Huey Lewis and the News burst out of San Francisco onto the national music scene at the beginning of the decade, with their self-titled rock pop album released by Chrysalis, though they really didn’t come into their own, commercially or artistically, until their 1983 smash, Sports.'
-    ],
-    'mousse': [
-        '“Hello, Halberstam,” Owen says, walking by.\n“Hello, Owen,” I say, admiring the way he’s styled and slicked back his hair, with a part so even and sharp it... devastates me and I make a mental note to ask him where he purchases his hair-care products, which kind of mousse he uses, my final guess after mulling over the possibilities being Ten -X.'
+        'Huey also recorded two songs for the movie *Back to the Future*, which both went Number One, “The Power of Love” and “Back in Time,” delightful extras, not footnotes, in what has been shaping up into a legendary career.',
+        'Huey hits his notes like an embittered survivor and the band often sounds as angry as performers like the Clash or Billy Joel or Blondie. No one should forget that we have Elvis Costello to thank for discovering Huey in the first place. Huey played harmonica on Costello’s second record, the thin, vapid *My Aim Was You*.',
+        'Huey Lewis and the News burst out of San Francisco onto the national music scene at the beginning of the decade, with their self-titled rock pop album released by Chrysalis, though they really didn’t come into their own, commercially or artistically, until their 1983 smash, Sports.',
+        'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
+        '*Small World* (Chrysalis; 1988) is the most ambitious, artistically satisfying record yet produced by Huey Lewis and the News.'
     ],
     'patty': [
         'On *The Patty Winters Show* this morning the topic was Beautiful Teenage Lesbians, which I found so erotic I had to stay home, miss a meeting, jerk off twice.',
@@ -109,22 +105,44 @@ const engagedReplies = {
         '*The Patty Winters Show* this morning was Aspirin: Can It Save Your Life?',
         '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?'
     ],
-    'pepsi': [
-        'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
-        '“Listen. I’ll be daring,” Anne says finally. “I’ll have a Diet Coke with rum.”\nScott sighs, then smiles, beaming really. “Good.”\n“That’s a caffeine-fine Diet Coke, right?” Anne asks the waiter.\n“You know,” I interrupt, “you should have it with Diet Pepsi. It’s much better.”\n“Really?” Anne asks. “What do you mean?”\n“You should have the Diet Pepsi instead of the Diet Coke,” I say. “It’s much better. It’s fizzier. It has a cleaner taste. It mixes better with rum and has a lower sodium content.”'
+    'pizza': [
+        'You can’t stay angry at me because I think the pizza at Pastels is... crusty.'
     ],
     'secretary': [
         'Jean, my secretary who is in love with me, walks into my office without buzzing, announcing that I have a very important company meeting to attend at eleven.',
         'My secretary, Jean, who is in love with me and who I will probably end up marrying, sits at her desk and this morning, to get my attention as usual, is wearing something improbably expensive and completely inappropriate: a Chanel cashmere cardigan, a cashmere crewneck and a cashmere scarf, faux-pearl earrings, wool-crepe pants from Barney’s.'
     ],
-    'video store': [
+    'video': [
+        'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
         'The video store is more crowded than usual. There are too many couples in line for me to rent She-Male Reformatory or Ginger’s Cunt without some sense of awkwardness or discomfort, plus I’ve already bumped into Robert Ailes from First Boston in the Horror aisle, or at least I think it was Robert Ailes. He mumbled “Hello, McDonald” as he passed me by, holding Friday the 13th: Part 7 and a documentary on abortions in what I noticed were nicely manicured hands marred only by what looked to me like an imitation-gold Rolex.'
+    ],
+    'wearing': [
+        'Earlier in the evening I was wearing a suit tailored by Edward Sexton and thinking sadly about my family’s house in Newport.',
+        'I am wearing a mini-houndstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
+        'I’m loosening the tie I’m still wearing with a blood-soaked hand, breathing in deeply. ',
+        'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
+        'I’m wearing a four-button double-breasted wool and silk suit, a cotton shirt with a button-down collar by Valentino Couture, a patterned silk tie by Armani and cap-toed leather slipons by Allen-Edmonds.',
+        'I’m wearing a lightweight linen suit with pleated trousers, a cotton shirt, a dotted silk tie, all by Valentino Couture, and perforated cap-toe leather shoes by Allen-Edmonds.',
+        'I’m wearing a six-button double-breasted wool suit by Ermenegildo Zegna, a striped cotton shirt by Luciano Barbera, a silk tie by Armani, suede wing-tips by Ralph Lauren, socks by E. G. Smith.',
+        'I’m wearing a two-button singlebreasted chalk-striped wool-flannel suit, a multicolored candy-striped cotton shirt and a silk pocket square, all by Patrick Aubert, a polka-dot silk tie by Bill Blass and clear prescription eyeglasses with frames by Lafont Paris.',
+        'I’m wearing a two-button wool gabardine suit with notched lapels by Gian Marco Venturi, cap-toed leather laceups by Armani, tie by Polo, socks I’m not sure where from.',
+        'I’m wearing a two-button wool suit with pleated trousers by Luciano Soprani, a cotton shirt by Brooks Brothers and a silk tie by Armani.',
+        'I’m wearing a wool suit by Armani, shoes by Allen-Edmonds, pocket square by Brooks Brothers.',
+        'I’m wearing faded jeans, an Armani jacket, and a white, hundred-and-forty-dollar Comme des Garçons T-shirt.',
+        'In bed I’m wearing Ralph Lauren silk pajamas and when I get up I slip on a paisley ancient madder robe and walk to the bathroom. I urinate while trying to make out the puffiness of my reflection in the glass that encases a baseball poster hung above the toilet. After I change into Ralph Lauren monogrammed boxer shorts and a Fair Isle sweater and slide into silk polka-dot Enrico Hidolin slippers I tie a plastic ice pack around my face and commence with the morning’s stretching exercises.',
+        'In the cab I’m wearing a double-breasted cashmere and wool overcoat by Studio 000.1 from Ferré, a wool suit with pleated trousers by DeRigueur from Schoeneman, a silk tie by Givenchy Gentleman, socks by Interwoven, shoes by Armani, reading the *Wall Street Journal* with my Ray-Ban sunglasses on and listening to a Walkman with a Bix Beiderbecke tape playing in it.',
+        'So far I’m wearing black Armani trousers, a white Armani shirt, a red sad black Armani tie.',
+        'The air-conditioning in the restaurant is on full blast and I’m beginning to feel bad that I’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.',
+        'The shoes I’m wearing are crocodile loafers by A. Testoni.',
+        'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.'
     ]
 }
 
-const getReply = (replies) => {
-    return replies[Math.floor(Math.random() * replies.length)];
-}
+const signatures = [
+    '*I am a bot. Ask me how I got on at the gym today.*',
+    '*I am a bot. Ask me what I’m wearing.*',
+    '*I am a bot. Ask me what was on the Patty Winters Show this morning.*'
+]
 
 const triggerWords = [
     'american psycho',
@@ -136,8 +154,18 @@ const triggerWords = [
     'huey lewis'
 ]
 
+const getRandomArrayValue = (array) => {
+    if (!array) {
+        return;
+    }
+
+    return array[Math.floor(Math.random() * array.length)];
+}
+
 const postReply = (comment, reply) => {
-    reply = `${reply}\n___\n^(*I am a bot. I have an eight-thirty reservation tonight at Dorsia.*)`;
+    const signature = getRandomArrayValue(signatures);
+
+    reply = `${reply}\n___\n^(${signature})`;
 
     comment.reply(reply);
 }
@@ -147,11 +175,35 @@ const readComment = (comment) => {
         return;
     }
 
+    let reply;
+
     for (let triggerWord of triggerWords) {
         if (comment.body.includes(triggerWord)) {
-            const reply = getReply(initialReplies);
+            reply = getRandomArrayValue(specificReplies[triggerWord]);
 
-            postReply(comment, reply);            
+            if (!reply) {
+                reply = getRandomArrayValue(generalReplies);
+            }
+
+            postReply(comment, reply);
+
+            break;
+        }
+    }
+};
+
+const readSubmission = (submission) => {
+    let reply;
+
+    for (let triggerWord of triggerWords) {
+        if (submission.selftext.includes(triggerWord) || submission.title.includes(triggerWord)) {
+            reply = getRandomArrayValue(specificReplies[triggerWord]);
+
+            if (!reply) {
+                reply = getRandomArrayValue(generalReplies);
+            }
+
+            postReply(submission, reply);
 
             break;
         }
@@ -159,31 +211,11 @@ const readComment = (comment) => {
 };
 
 const readUnreadMessage = (message) => {
-    let reply;
-
-    for (let key of Object.keys(engagedReplies)) {
+    for (let key of Object.keys(specificReplies)) {
         if (message.body.includes(key)) {
-            reply = getReply(engagedReplies[key]);
-   
-            postReply(message, reply);            
-   
-            break;
-        }
-    }
+            const reply = getRandomArrayValue(specificReplies[key]);
 
-    // if (!reply) {
-    //     reply = getReply(generalReplies);
-
-    //     postReply(comment, reply);
-    // }
-};
-
-const readSubmission = (submission) => {
-    for (let triggerWord of triggerWords) {
-        if (submission.selftext.includes(triggerWord) || submission.title.includes(triggerWord)) {
-            const reply = getReply(initialReplies);
-
-            postReply(submission, reply);            
+            postReply(message, reply);
 
             break;
         }
