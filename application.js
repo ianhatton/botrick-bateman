@@ -18,7 +18,7 @@ const snoowrap = new Snoowrap({
 const client = new Snoostorm(snoowrap),
       streamOptions = {
           subreddit: 'all',
-          results: 10
+          results: 25
       },
       comments = client.CommentStream(streamOptions),
       submissions = client.SubmissionStream(streamOptions);
