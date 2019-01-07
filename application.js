@@ -44,9 +44,12 @@ const specificReplies = {
         'When I’m moving down Broadway to meet Jean, my secretary, for brunch, in front of Tower Records a college student with a clipboard asks me to name the saddest song I know. I tell him, without pausing, “You Can’t Always Get What You Want” by the Beatles. Then he asks me to name the happiest song I know, and I say “Brilliant Disguise” by Bruce Springsteen.'
     ],
     'business card': [
+        'I pick up Montgomery’s card and actually finger it, for the sensation the card gives off to the pads of my fingers.\n\n“Nice, huh?” Price’s tone suggests he realizes I’m jealous.\n\n“Yeah,” I say offhandedly, giving Price the card like I don’t give a shit, but I’m finding it hard to swallow.',
         'I’m looking at Van Patten’s card and then at mine and cannot believe that Price actually likes Van Patten’s better.\n\nDizzy, I sip my drink then take a deep breath.',
+        'I’m still tranced out on Montgomery’s card—the classy coloring, the thickness, the lettering, the print—and I suddenly raise a fist as if to strike out at Craig and scream, my voice booming, “No one wants the fucking *red snapper pizza*! A pizza should be *yeasty* and slightly *bready* and have a *cheesy crust*! The crusts here are too fucking thin because the shithead chef who cooks here overbakes everything! The pizza is dried out and brittle!”',
         '“New card.” I try to act casual about it but I’m smiling proudly. “What do you think?”\n\n“Whoa,” McDermott says, lifting it up, fingering the card, genuinely impressed. “Very nice. Take a look.” He hands it to Van Patten.\n\n“Picked them up from the printer’s yesterday,” I mention.\n\n“Cool coloring,” Van Patten says, studying the card closely.\n\n“That’s bone,” I point out. “And the lettering is something called Silian Rail.”',
-        'The maître d’ stops by to say hello to McDermott, then notices we don’t have our complimentary Bellinis, and runs off before any of us can stop him. I’m not sure how McDermott knows Alain so well—maybe Cecelia?—and it slightly pisses me off but I decide to even up the score a little bit by showing everyone my new business card. I pull it out of my gazelleskin wallet (Barney’s, $850) and slap it on the table, waiting for reactions.'
+        'The maître d’ stops by to say hello to McDermott, then notices we don’t have our complimentary Bellinis, and runs off before any of us can stop him. I’m not sure how McDermott knows Alain so well—maybe Cecelia?—and it slightly pisses me off but I decide to even up the score a little bit by showing everyone my new business card. I pull it out of my gazelleskin wallet (Barney’s, $850) and slap it on the table, waiting for reactions.',
+        'We all lean over and inspect David’s card and Price quietly says, “That’s *really* nice.”\n\nA brief spasm of jealousy courses through me when I notice the elegance of the color and the classy type. I clench my fist as Van Patten says, smugly, “Eggshell with Romalian type...” He turns to me. “What do you think?”\n\n“Nice,” I croak, but manage to nod, as the busboy brings four fresh Bellinis.'
     ],
     'cologne': [
         'You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin.'
@@ -178,7 +181,7 @@ const readComment = (comment) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (comment.body.includes(triggerWord)) {
+        if (comment.body.toLowerCase().includes(triggerWord)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -196,7 +199,7 @@ const readSubmission = (submission) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (submission.selftext.includes(triggerWord) || submission.title.includes(triggerWord)) {
+        if (submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -212,7 +215,7 @@ const readSubmission = (submission) => {
 
 const readUnreadMessage = (message) => {
     for (let key of Object.keys(specificReplies)) {
-        if (message.body.includes(key)) {
+        if (message.body.toLowerCase().includes(key)) {
             const reply = getRandomArrayValue(specificReplies[key]);
 
             postReply(message, reply);
