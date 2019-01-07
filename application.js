@@ -91,6 +91,9 @@ const specificReplies = {
         'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
         '*Small World* (Chrysalis; 1988) is the most ambitious, artistically satisfying record yet produced by Huey Lewis and the News.'
     ],
+    'overnight bag?': [
+        'Jean-Paul Gaultier.'
+    ],
     'patty': [
         'On *The Patty Winters Show* this morning the topic was Beautiful Teenage Lesbians, which I found so erotic I had to stay home, miss a meeting, jerk off twice.',
         'Talking animals were the topic of this morning’s *Patty Winters Show*. An octopus was floating in a makeshift aquarium with a microphone attached to one of its tentacles and it kept asking—or so its “trainer,” who is positive that mollusks have vocal cords, assured us—for “cheese.” I watched, vaguely transfixed, until I started to sob.',
