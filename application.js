@@ -66,9 +66,11 @@ const specificReplies = {
     'drink': [
         'I check my Rolex and realize that if we have one drink, maybe two, I’ll get home in time for *Late Night with David Letterman*.'
     ],
-    'food': [
-        'I fork a piece of monkfish, push it into some of the golden caviar, then place the fork back down.',
-        'Van Patten has the scallop sausage and the grilled salmon with raspberry vinegar and guacamole. The air-conditioning in the restaurant is on full blast and I\’m beginning to feel bad that I\’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.'
+    'eaten': [
+        'For an appetizer I ordered radicchio with some kind of free-range squid.',
+        'For dinner I order the shad-roe ravioli with apple compote as an appetizer and the meat loaf with chèvre and quail-stock sauce for an entrée.',
+        'I’ve forgotten who I had lunch with earlier and, even more important, *where*. Was it Robert Ailes at Beats? Or was it Todd Hendricks at Ursula’s, the new Philip Duncan Holmes bistro in Tribeca? Or was it Ricky Worrall and were we at December’s? Or would it have been Kevin Weber at Contra in NoHo? Did I order the partridge sandwich on brioche with green tomatoes, or a big plate of endive with clam sauce? “Oh god, *I can’t remember*,” I moan, my clothes—a linen and silk sport coat, a cotton shirt, pleated linen khald trousers, all by Matsuda, a silk tie with a Matsuda insignia, with a belt from Coach Leatherware—drenched with sweat, and I take off the jacket and wipe my face with it.',
+        'Now the Shirelles are coming out of the speakers, “Dancing in the Street,” and the sound system plus the acoustics, because of the restaurant’s high ceiling, are so loud that we have to practically scream out our order to the hardbody waitress—who is wearing a bicolored suit of wool grain with passementerie trim by Myrone de Prémonville and velvet ankle boots and who, I’m fairly sure, is flirting with me: laughs sexily when I order, as an appetizer, the monkfish and squid ceviche with golden caviar; gives me a stare so steamy, so penetrating when I order the gravlax potpie with green tomatillo sauce I have to look back at the pink Bellini in the tall champagne flute with a concerned, *deadly* serious expression so as not to let her think I’m *too* interested.'
     ],
     'genesis': [
         'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
@@ -81,7 +83,6 @@ const specificReplies = {
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
         'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
         'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
-        'No hardbodies at the gym today. Only faggots from the West Side, probably unemployed actors, waiters by night, and Muldwyn Butner of Sachs, who I went to Exeter with, over at the biceps curl machine.',
         'Two thousand abdominal crunches and thirty minutes of rope jumping in the living room, the Wurlitzer jukebox blasting “The Lion Sleeps Tonight” over and over, even though I worked out in the gym today for close to two hours.'
     ],
     'huey lewis': [
@@ -114,35 +115,71 @@ const specificReplies = {
     'pizza': [
         'You can’t stay angry at me because I think the pizza at Pastels is... crusty.'
     ],
+    'rain coat?': [
+        'Yes it is!'
+    ],
     'secretary': [
         'Jean, my secretary who is in love with me, walks into my office without buzzing, announcing that I have a very important company meeting to attend at eleven.',
         'My secretary, Jean, who is in love with me and who I will probably end up marrying, sits at her desk and this morning, to get my attention as usual, is wearing something improbably expensive and completely inappropriate: a Chanel cashmere cardigan, a cashmere crewneck and a cashmere scarf, faux-pearl earrings, wool-crepe pants from Barney’s.'
     ],
+    'tapes': [
+        'I forgot to return my videotapes to the store tonight and I curse myself silently while Scott orders two large bottles of San Pellegrino.',
+        '“I have to return some videotapes,” I explain in a rush.',
+        'I have videotapes to return, money to be taken out of an automated teller, a dinner reservation at 150 Wooster that was difficult to get.',
+        '“I’ve gotta return some videotapes,” I say, jabbing at the elevator button, then, my patience shot, I start to walk away and head back toward my table.',
+        'My VideoVisions membership costs only two hundred and fifty dollars annually.',
+        'Unable to linger since there are things to be done today: return videotapes, work out at the gym, a new British musical on Broadway I promised Jeanette I’d take her to, a dinner reservation to be made somewhere.'
+    ],
     'video': [
         'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
+        'My VideoVisions membership costs only two hundred and fifty dollars annually.',
         'The video store is more crowded than usual. There are too many couples in line for me to rent She-Male Reformatory or Ginger’s Cunt without some sense of awkwardness or discomfort, plus I’ve already bumped into Robert Ailes from First Boston in the Horror aisle, or at least I think it was Robert Ailes. He mumbled “Hello, McDonald” as he passed me by, holding Friday the 13th: Part 7 and a documentary on abortions in what I noticed were nicely manicured hands marred only by what looked to me like an imitation-gold Rolex.'
     ],
     'wearing': [
         'Earlier in the evening I was wearing a suit tailored by Edward Sexton and thinking sadly about my family’s house in Newport.',
+        'I am wearing a custom-made tweed jacket, pants and a cotton shirt from the Alan Flusser shop and a silk tie by Paul Stuart.',
         'I am wearing a mini-houndstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
         'I’m loosening the tie I’m still wearing with a blood-soaked hand, breathing in deeply. ',
         'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
+        'I’m wearing a cashmere topcoat, a double-breasted plaid wool and alpaca sport coat, pleated wool trousers, patterned silk tie, all by Valentino Couture, and leather lace-ups by Allen-Edmonds.',
+        'I’m wearing a double-breasted suit, a silk shirt with woven stripes, a patterned silk tie and leather slip-ons, all by Gianni Versace.',
         'I’m wearing a four-button double-breasted wool and silk suit, a cotton shirt with a button-down collar by Valentino Couture, a patterned silk tie by Armani and cap-toed leather slipons by Allen-Edmonds.',
+        'I’m wearing a Joseph Abboud suit, a tie by Paul Stuart, shoes by J.Crew, a vest by someone Italian and I’m kneeling on the floor beside a corpse, eating the girl’s brain, gobbling it down, spreading Grey Poupon over hunks of the pink, fleshy meat.',
+        'I’m wearing a lamb’s wool topcoat, a wool jacket with wool flannel trousers, a cotton shirt, a cashmere V-neck sweater and a silk tie, all from Armani.',
         'I’m wearing a lightweight linen suit with pleated trousers, a cotton shirt, a dotted silk tie, all by Valentino Couture, and perforated cap-toe leather shoes by Allen-Edmonds.',
+        'I’m wearing a nailhead-patterned worsted wool suit with overplaid from DeRigueur by Schoeneman, a cotton broadcloth shirt by Bill Blass, a Macclesfield silk tie by Savoy and a cotton handkerchief by Ashear Bros.',
+        'I’m wearing a six-button double-breasted chalk-striped wool suit and a patterned silk tie, both by Louis, Boston, and a cotton oxford cloth shirt by Luciano Barbera.',
         'I’m wearing a six-button double-breasted wool suit by Ermenegildo Zegna, a striped cotton shirt by Luciano Barbera, a silk tie by Armani, suede wing-tips by Ralph Lauren, socks by E. G. Smith.',
+        'I’m wearing a six-button double-breasted wool-crepe tuxedo with pleated trousers and a silk grosgrain bow tie, all by Valentino.',
+        'I’m wearing a tick-weave wool suit with a windowpane overplaid, a cotton shirt by Luciano Barbera, a tie by Luciano Barbera, shoes from Cole-Haan and nonprescription glasses by Bausch & Lomb.',
+        'I’m wearing a tuxedo for no apparent reason.',
+        'I’m wearing a two-button linen suit, a cotton shirt, a silk tie and leather wing-tips, all by Armani.',
         'I’m wearing a two-button singlebreasted chalk-striped wool-flannel suit, a multicolored candy-striped cotton shirt and a silk pocket square, all by Patrick Aubert, a polka-dot silk tie by Bill Blass and clear prescription eyeglasses with frames by Lafont Paris.',
         'I’m wearing a two-button wool gabardine suit with notched lapels by Gian Marco Venturi, cap-toed leather laceups by Armani, tie by Polo, socks I’m not sure where from.',
         'I’m wearing a two-button wool suit with pleated trousers by Luciano Soprani, a cotton shirt by Brooks Brothers and a silk tie by Armani.',
+        'I’m wearing a wing-collar jacquard waistcoat by Kilgour, French & Stanbury from Barney’s, a silk bow tie from Sales, patent-leather slip-ons by Baker-Benjes, antique diamond studs from Kentshire Galleries and a gray wool silk-lined coat with drop sleeves and a button-down collar by Luciano Soprani. An ostrich wallet from Bosca carries four hundred dollars cash in the back pocket of my black wool trousers. Instead of my Rolex I’m wearing a fourteen-karat gold watch from H. Stern.',
         'I’m wearing a wool suit by Armani, shoes by Allen-Edmonds, pocket square by Brooks Brothers.',
         'I’m wearing faded jeans, an Armani jacket, and a white, hundred-and-forty-dollar Comme des Garçons T-shirt.',
+        'I’m wearing Mario Valentino Persian-black gloves. My VideoVisions membership costs only two hundred and fifty dollars annually.',
+        'I’m wearing a wool tweed suit and a striped cotton shirt, both by Yves Saint Laurent, and a silk tie by Armani and new black cap-toed shoes by Ferragamo.',
         'In bed I’m wearing Ralph Lauren silk pajamas and when I get up I slip on a paisley ancient madder robe and walk to the bathroom. I urinate while trying to make out the puffiness of my reflection in the glass that encases a baseball poster hung above the toilet. After I change into Ralph Lauren monogrammed boxer shorts and a Fair Isle sweater and slide into silk polka-dot Enrico Hidolin slippers I tie a plastic ice pack around my face and commence with the morning’s stretching exercises.',
         'In the cab I’m wearing a double-breasted cashmere and wool overcoat by Studio 000.1 from Ferré, a wool suit with pleated trousers by DeRigueur from Schoeneman, a silk tie by Givenchy Gentleman, socks by Interwoven, shoes by Armani, reading the *Wall Street Journal* with my Ray-Ban sunglasses on and listening to a Walkman with a Bix Beiderbecke tape playing in it.',
         'So far I’m wearing black Armani trousers, a white Armani shirt, a red sad black Armani tie.',
         'The air-conditioning in the restaurant is on full blast and I’m beginning to feel bad that I’m not wearing the new Versace pullover I bought last week at Bergdorfs. It would look good with the suit I’m wearing.',
         'The shoes I’m wearing are crocodile loafers by A. Testoni.',
-        'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.'
+        'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.',
+        'Tonight I’m wearing a new wool topcoat by Ungaro Uomo Paris and carrying a Bottega Veneta briefcase and an umbrella by Georges Gaspar.'
     ]
 }
+
+const ignoredUsers = [
+    'botrickbateman',
+    'Mouthtrap'
+]
+
+const ignoredWords = [
+    'american psychology'
+]
 
 const signatures = [
     '*I am a bot. Ask me how I got on at the gym today.*',
@@ -152,12 +189,13 @@ const signatures = [
 
 const triggerWords = [
     'american psycho',
-    'bateman',
     'botrickbateman',
     'bret easton ellis',
     'business card',
     'dorsia',
-    'huey lewis'
+    'huey lewis',
+    'pat bateman',
+    'patrick bateman'
 ]
 
 const getRandomArrayValue = (array) => {
@@ -177,14 +215,14 @@ const postReply = (comment, reply) => {
 }
 
 const readComment = (comment) => {
-    if (comment.author.name === 'botrickbateman') {
+    if (ignoredUsers.includes(comment.author.name)) {
         return;
     }
 
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (comment.body.toLowerCase().includes(triggerWord)) {
+        if (comment.body.toLowerCase().includes(triggerWord) && !comment.body.toLowerCase().includes(ignoredWords)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -202,7 +240,7 @@ const readSubmission = (submission) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) {
+        if ((submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) && !submission.selftext.toLowerCase().includes(ignoredWords) && !submission.title.toLowerCase().includes(ignoredWords)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
