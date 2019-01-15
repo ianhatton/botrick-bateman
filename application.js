@@ -178,7 +178,9 @@ const ignoredUsers = [
 ]
 
 const ignoredWords = [
-    'american psychology'
+    'american psychological',
+    'american psychology',
+    'american psychosis'
 ]
 
 const signatures = [
