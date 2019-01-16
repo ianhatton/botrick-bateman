@@ -72,6 +72,20 @@ const specificReplies = {
         'I’ve forgotten who I had lunch with earlier and, even more important, *where*. Was it Robert Ailes at Beats? Or was it Todd Hendricks at Ursula’s, the new Philip Duncan Holmes bistro in Tribeca? Or was it Ricky Worrall and were we at December’s? Or would it have been Kevin Weber at Contra in NoHo? Did I order the partridge sandwich on brioche with green tomatoes, or a big plate of endive with clam sauce? “Oh god, *I can’t remember*,” I moan, my clothes—a linen and silk sport coat, a cotton shirt, pleated linen khald trousers, all by Matsuda, a silk tie with a Matsuda insignia, with a belt from Coach Leatherware—drenched with sweat, and I take off the jacket and wipe my face with it.',
         'Now the Shirelles are coming out of the speakers, “Dancing in the Street,” and the sound system plus the acoustics, because of the restaurant’s high ceiling, are so loud that we have to practically scream out our order to the hardbody waitress—who is wearing a bicolored suit of wool grain with passementerie trim by Myrone de Prémonville and velvet ankle boots and who, I’m fairly sure, is flirting with me: laughs sexily when I order, as an appetizer, the monkfish and squid ceviche with golden caviar; gives me a stare so steamy, so penetrating when I order the gravlax potpie with green tomatillo sauce I have to look back at the pink Bellini in the tall champagne flute with a concerned, *deadly* serious expression so as not to let her think I’m *too* interested.'
     ],
+    'feel': [
+        'I feel aimless, things look cloudy, my homicidal compulsion, which surfaces, disappears, surfaces, leaves again, lies barely dormant during a quiet lunch at Alex Goes to Camp, where I have the lamb sausage salad with lobster and white beans sprayed with lime and foie gras vinegar.',
+        'I feel anchored, calm, even with Evelyn sitting across from me prattling on about a very large Fabergé egg she thought she saw at the Pierre, rolling around the lobby of its own accord or something like that.',
+        'I feel empty, hardly here at all.',
+        'I feel heady, ravenous, pumped up, as if I’d just worked out and endorphins are flooding my nervous system, or just embraced that first line of cocaine, inhaled the first puff of a fine cigar, sipped that first glass of Cristal.',
+        'I feel I’m moving toward as well as away from something, and anything is possible.',
+        'I feel light-headed.',
+        'I feel like shit but look great.',
+        'I feel naked, suddenly tiny. My mouth tastes metallic, then it gets worse. My vision: a winter road. But I’m left with one comforting thought: I am rich—millions are not.',
+        'I feel sick and broken, tortured, really on the brink.',
+        'I feel sick, my chest and back covered with sweat, drenched, it seems, instantaneously.',
+        'I’m laughing still, but I’m also very dizzy.',
+        'I’m sweaty and a pounding migraine thumps dully in my head and I’m experiencing a major-league anxiety attack, searching my pockets for Valium, Xanax, a leftover Halcion, anything, and all I find are three faded Nuprin in a Gucci pillbox, so I pop all three into my mouth and swallow them down with a Diet Pepsi and I couldn’t tell you where it came from if my life depended on it.'
+    ],
     'genesis': [
         'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
     ],
@@ -82,6 +96,7 @@ const specificReplies = {
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
         'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
+        'I worked out at Xclusive for two hours this morning.',
         'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
         'Two thousand abdominal crunches and thirty minutes of rope jumping in the living room, the Wurlitzer jukebox blasting “The Lion Sleeps Tonight” over and over, even though I worked out in the gym today for close to two hours.'
     ],
@@ -179,12 +194,14 @@ const ignoredUsers = [
 
 const ignoredWords = [
     'american psychological',
+    'american psychologists',
     'american psychology',
     'american psychosis'
 ]
 
 const signatures = [
     '*I am a bot. Ask me how I got on at the gym today.*',
+    '*I am a bot. Ask me how I’m feeling.*',
     '*I am a bot. Ask me what I’m wearing.*',
     '*I am a bot. Ask me what was on the Patty Winters Show this morning.*'
 ]
