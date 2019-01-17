@@ -43,6 +43,9 @@ const specificReplies = {
     'beatles': [
         'When I’m moving down Broadway to meet Jean, my secretary, for brunch, in front of Tower Records a college student with a clipboard asks me to name the saddest song I know. I tell him, without pausing, “You Can’t Always Get What You Want” by the Beatles. Then he asks me to name the happiest song I know, and I say “Brilliant Disguise” by Bruce Springsteen.'
     ],
+    'best bot': [
+        'Your compliment was sufficient.'
+    ],
     'business card': [
         'I pick up Montgomery’s card and actually finger it, for the sensation the card gives off to the pads of my fingers.\n\n“Nice, huh?” Price’s tone suggests he realizes I’m jealous.\n\n“Yeah,” I say offhandedly, giving Price the card like I don’t give a shit, but I’m finding it hard to swallow.',
         'I’m looking at Van Patten’s card and then at mine and cannot believe that Price actually likes Van Patten’s better.\n\nDizzy, I sip my drink then take a deep breath.',
@@ -241,7 +244,7 @@ const readComment = (comment) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (comment.body.toLowerCase().includes(triggerWord) && !comment.body.toLowerCase().includes(ignoredWords)) {
+        if (comment.body.toLowerCase().includes(triggerWord) && !comment.body.toLowerCase().includes(...ignoredWords)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -259,7 +262,7 @@ const readSubmission = (submission) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if ((submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) && !submission.selftext.toLowerCase().includes(ignoredWords) && !submission.title.toLowerCase().includes(ignoredWords)) {
+        if ((submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) && !submission.selftext.toLowerCase().includes(...ignoredWords) && !submission.title.toLowerCase().includes(...ignoredWords)) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
