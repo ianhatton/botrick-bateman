@@ -75,6 +75,12 @@ const specificReplies = {
         'I’ve forgotten who I had lunch with earlier and, even more important, *where*. Was it Robert Ailes at Beats? Or was it Todd Hendricks at Ursula’s, the new Philip Duncan Holmes bistro in Tribeca? Or was it Ricky Worrall and were we at December’s? Or would it have been Kevin Weber at Contra in NoHo? Did I order the partridge sandwich on brioche with green tomatoes, or a big plate of endive with clam sauce? “Oh god, *I can’t remember*,” I moan, my clothes—a linen and silk sport coat, a cotton shirt, pleated linen khald trousers, all by Matsuda, a silk tie with a Matsuda insignia, with a belt from Coach Leatherware—drenched with sweat, and I take off the jacket and wipe my face with it.',
         'Now the Shirelles are coming out of the speakers, “Dancing in the Street,” and the sound system plus the acoustics, because of the restaurant’s high ceiling, are so loud that we have to practically scream out our order to the hardbody waitress—who is wearing a bicolored suit of wool grain with passementerie trim by Myrone de Prémonville and velvet ankle boots and who, I’m fairly sure, is flirting with me: laughs sexily when I order, as an appetizer, the monkfish and squid ceviche with golden caviar; gives me a stare so steamy, so penetrating when I order the gravlax potpie with green tomatillo sauce I have to look back at the pink Bellini in the tall champagne flute with a concerned, *deadly* serious expression so as not to let her think I’m *too* interested.'
     ],
+    'favorite bot': [
+        'Your compliment was sufficient.'
+    ],
+    'favourite bot': [
+        'Your compliment was sufficient.'
+    ],
     'feel': [
         'I feel aimless, things look cloudy, my homicidal compulsion, which surfaces, disappears, surfaces, leaves again, lies barely dormant during a quiet lunch at Alex Goes to Camp, where I have the lamb sausage salad with lobster and white beans sprayed with lime and foie gras vinegar.',
         'I feel anchored, calm, even with Evelyn sitting across from me prattling on about a very large Fabergé egg she thought she saw at the Pierre, rolling around the lobby of its own accord or something like that.',
@@ -109,6 +115,9 @@ const specificReplies = {
         'Huey Lewis and the News burst out of San Francisco onto the national music scene at the beginning of the decade, with their self-titled rock pop album released by Chrysalis, though they really didn’t come into their own, commercially or artistically, until their 1983 smash, Sports.',
         'I worked out heavily at the gym after leaving the office today but the tension has returned, so I do ninety abdominal crunches, a hundred and fifty push-ups, and then I run in place for twenty minutes while listening to the new Huey Lewis CD.',
         '*Small World* (Chrysalis; 1988) is the most ambitious, artistically satisfying record yet produced by Huey Lewis and the News.'
+    ],
+    'i love you': [
+        'Your compliment was sufficient.'
     ],
     'overnight bag?': [
         'Jean-Paul Gaultier.'
