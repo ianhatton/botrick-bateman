@@ -57,6 +57,9 @@ const specificReplies = {
     'cologne': [
         'You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin.'
     ],
+    'courtney': [
+        'She’s wearing a Krizia cream silk blouse, a Krizia rust tweed skirt and silk-satin d’Orsay pumps from Manolo Blahnik.'
+    ],
     'dorsia': [
         '“Dorsia is... fine,” I say casually, picking up the phone, and with a trembling finger very quickly dial the seven dreaded numbers, trying to remain cool. Instead of the busy signal I’m expecting, the phone actually rings at Dorsia and after two rings the same harassed voice I’ve grown accustomed to for the past free months answers, shouting out, “Dorsia, yes?” the room behind the voice a deafening hum.\n\n“Yes, can you take two tonight, oh, let’s say, in around twenty minutes?” I ask, checking my Rolex, offering Jean a wink. She seems impressed.\n\n“We are totally booked,” the maître d’ shouts out smugly.\n\n“Oh, really?” I say, trying to look pleased, on the verge of vomiting. “That’s great.”\n\n“I said we are totally booked,” he shouts.\n\n“Two at nine?” I say. “Perfect.”\n\n“There are no tables available tonight,” the maître d’, unflappable, drones. “The waiting list is also totally booked.” He hangs up.\n\n“See you then.” I hang up too, and with a smile that tries its best to express pleasure at her choice, I find myself fighting for breath, every muscle tensed sharply.',
         'I clear my throat. “Um, yes, I know it’s a little late but is it possible to reserve a table for two at eight-thirty or nine perhaps?” I’m asking this with both eyes shut tight.\n\nThere is a pause—the crowd in the background a surging, deafening mass—and with real hope coursing through me I open my eyes, realizing that the maître d’, god love him, is probably looking through the reservation book for a cancellation—but then he starts giggling, low at first but it builds to a high-pitched crescendo of laughter which is abruptly cut off when he slams down the receiver.',
@@ -119,6 +122,9 @@ const specificReplies = {
     'i love you': [
         'Your compliment was sufficient.'
     ],
+    'mcdermott': [
+        'McDermott is wearing a woven-linen suit with pleated trousers, a button-down cotton and linen shirt by Basile, a silk tie by Joseph Abboud and ostrich loafers from Susan Bennis Warren Edwards.'
+    ],
     'overnight bag?': [
         'Jean-Paul Gaultier.'
     ],
@@ -142,6 +148,13 @@ const specificReplies = {
     'pizza': [
         'You can’t stay angry at me because I think the pizza at Pastels is... crusty.'
     ],
+    'preston': [
+        'Preston is wearing a double-breasted wool suit by Alexander Julian, a cotton shirt and a silk Perry Ellis tie.'
+    ],
+    'price': [
+        'He’s wearing a linen suit by Canali Milano, a cotton shirt by Ike Behar, a silk tie by Bill Blass and cap-toed leather lace-ups from Brooks Brothers.',
+        'Price is wearing a six-button wool and silk suit by Ermenegildo Zegna, a cotton shirt with French cuffs by Ike Behar, a Ralph Lauren silk tie and leather wing tips by Fratelli Rossetti.'
+    ],
     'rain coat?': [
         'Yes it is!'
     ],
@@ -152,6 +165,9 @@ const specificReplies = {
         'Jean, my secretary who is in love with me, walks into my office without buzzing, announcing that I have a very important company meeting to attend at eleven.',
         'My secretary, Jean, who is in love with me and who I will probably end up marrying, sits at her desk and this morning, to get my attention as usual, is wearing something improbably expensive and completely inappropriate: a Chanel cashmere cardigan, a cashmere crewneck and a cashmere scarf, faux-pearl earrings, wool-crepe pants from Barney’s.'
     ],
+    'stash': [
+        'I can’t tell what Stash is wearing since it’s all black.'
+    ],
     'tapes': [
         'I forgot to return my videotapes to the store tonight and I curse myself silently while Scott orders two large bottles of San Pellegrino.',
         '“I have to return some videotapes,” I explain in a rush.',
@@ -159,6 +175,9 @@ const specificReplies = {
         '“I’ve gotta return some videotapes,” I say, jabbing at the elevator button, then, my patience shot, I start to walk away and head back toward my table.',
         'My VideoVisions membership costs only two hundred and fifty dollars annually.',
         'Unable to linger since there are things to be done today: return videotapes, work out at the gym, a new British musical on Broadway I promised Jeanette I’d take her to, a dinner reservation to be made somewhere.'
+    ],
+    'van patten': [
+        'Van Patten is wearing a double-breasted wool and silk sport coat, button-fly wool and silk trousers with inverted pleats by Mario Valentino, a cotton shirt by Gitman Brothers, a polka-dot silk tie by Bill Blass and leather shoes from Brooks Brothers.'
     ],
     'video': [
         'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
@@ -214,6 +233,17 @@ const ignoredWords = [
     'american psychosis'
 ]
 
+const people = [
+    'courtney',
+    'evelyn',
+    'mcdermott',
+    'preston',
+    'price',
+    'stash',
+    'van patten',
+    'waitress'
+]
+
 const signatures = [
     '*I am a bot. Ask me how I got on at the gym today.*',
     '*I am a bot. Ask me how I’m feeling.*',
@@ -256,7 +286,9 @@ const readComment = (comment) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if (comment.body.toLowerCase().includes(triggerWord) && !comment.body.toLowerCase().includes(...ignoredWords)) {
+        const body = comment.body.toLowerCase();
+
+        if (body.includes(triggerWord) && ignoredWords.every(ignoredWord => !body.includes(ignoredWord))) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -274,7 +306,10 @@ const readSubmission = (submission) => {
     let reply;
 
     for (let triggerWord of triggerWords) {
-        if ((submission.selftext.toLowerCase().includes(triggerWord) || submission.title.toLowerCase().includes(triggerWord)) && !submission.selftext.toLowerCase().includes(...ignoredWords) && !submission.title.toLowerCase().includes(...ignoredWords)) {
+        const selftext = submission.selftext.toLowerCase(),
+              title = submission.title.toLowerCase();
+
+        if ((selftext.includes(triggerWord) || title.includes(triggerWord)) && ignoredWords.every(ignoredWord => !selftext.includes(ignoredWord)) && ignoredWords.every(ignoredWord => !title.includes(ignoredWord))) {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
@@ -291,6 +326,15 @@ const readSubmission = (submission) => {
 const readUnreadMessage = (message) => {
     for (let key of Object.keys(specificReplies)) {
         if (message.body.toLowerCase().includes(key)) {
+            // TODO: Check if a person was mentioned
+            // if (key === 'wearing') {
+            //     const reply = getRandomArrayValue(specificReplies[key]);
+
+            //     postReply(message, reply);
+
+            //     break;
+            // }
+
             const reply = getRandomArrayValue(specificReplies[key]);
 
             postReply(message, reply);
