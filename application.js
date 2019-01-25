@@ -303,6 +303,10 @@ const readComment = (comment) => {
 };
 
 const readSubmission = (submission) => {
+    if (ignoredUsers.includes(submission.author.name)) {
+        return;
+    }
+
     let reply;
 
     for (let triggerWord of triggerWords) {
