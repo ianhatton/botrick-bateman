@@ -271,7 +271,7 @@ const getRandomArrayValue = (array) => {
 }
 
 const postReply = (comment, reply) => {
-    const optOut = `[^Opt ^out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)`,
+    const optOut = `[^(Opt out)](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)`,
           signature = getRandomArrayValue(signatures);
 
     reply = `${reply}\n\n___\n\n^(${signature} |) ${optOut}`;
