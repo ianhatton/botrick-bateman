@@ -223,7 +223,8 @@ const specificReplies = {
 
 const ignoredUsers = [
     'botrickbateman',
-    'Mouthtrap'
+    'Mouthtrap',
+    'pixar_is_awesome'
 ]
 
 const ignoredWords = [
