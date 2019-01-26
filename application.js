@@ -245,10 +245,10 @@ const people = [
 ]
 
 const signatures = [
-    '*Bot. Ask me how I got on at the gym today.* | [Opt out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)',
-    '*Bot. Ask me how I’m feeling.* | [Opt out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)',
-    `*Bot. Ask me what I’m wearing.* | [Opt out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)`,
-    '*Bot. Ask me what was on the Patty Winters Show this morning.* | [Opt out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)'
+    '*I am a bot. Ask me how I got on at the gym today.*',
+    '*I am a bot. Ask me how I’m feeling.*',
+    '*I am a bot. Ask me what I’m wearing.*',
+    '*I am a bot. Ask me what was on the Patty Winters Show this morning.*'
 ]
 
 const triggerWords = [
