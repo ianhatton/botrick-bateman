@@ -245,10 +245,10 @@ const people = [
 ]
 
 const signatures = [
-    '*I am a bot. Ask me how I got on at the gym today.*',
-    '*I am a bot. Ask me how I’m feeling.*',
-    '*I am a bot. Ask me what I’m wearing.*',
-    '*I am a bot. Ask me what was on the Patty Winters Show this morning.*'
+    '*Bot. Ask me how I got on at the gym today.*',
+    '*Bot. Ask me how I’m feeling.*',
+    '*Bot. Ask me what I’m wearing.*',
+    '*Bot. Ask me what was on the Patty Winters Show this morning.*'
 ]
 
 const triggerWords = [
@@ -271,9 +271,10 @@ const getRandomArrayValue = (array) => {
 }
 
 const postReply = (comment, reply) => {
-    const signature = getRandomArrayValue(signatures);
+    const optOut = `[^Opt ^out](https://www.reddit.com/message/compose/?to=botrickbateman&subject=Opt%20out&message=I%20don%27t%20want%20you%20to%20reply%20to%20my%20posts%20any%20more!)`,
+          signature = getRandomArrayValue(signatures);
 
-    reply = `${reply}\n\n___\n\n^(${signature})`;
+    reply = `${reply}\n\n___\n\n^(${signature} |) ${optOut}`;
 
     comment.reply(reply);
 }
