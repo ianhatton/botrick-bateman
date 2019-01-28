@@ -223,14 +223,21 @@ const specificReplies = {
 
 const ignoredUsers = [
     'botrickbateman',
+    'ChoiceD',
     'CocoCapitan',
     'connor_lassiter',
+    'cyanocobalamin',
     'cystin',
+    'Faile486',
     'LordBottlecap',
     'MajorasGhot',
     'Mouthtrap',
+    'msdlp',
     'pixar_is_awesome',
-    'QuazeiM'
+    'preemptivemeasures',
+    'puckle-knuck',
+    'QuazeiM',
+    'Roadside-Strelok'
 ]
 
 const ignoredWords = [
