@@ -231,13 +231,16 @@ const ignoredUsers = [
     'Faile486',
     'LordBottlecap',
     'MajorasGhot',
+    'methodwriter85',
     'Mouthtrap',
     'msdlp',
     'pixar_is_awesome',
     'preemptivemeasures',
     'puckle-knuck',
     'QuazeiM',
-    'Roadside-Strelok'
+    'Roadside-Strelok',
+    'WEVP_TV',
+    'WhoStoleMyBurger'
 ]
 
 const ignoredWords = [
