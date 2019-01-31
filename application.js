@@ -236,9 +236,11 @@ const ignoredUsers = [
     'msdlp',
     'pixar_is_awesome',
     'preemptivemeasures',
+    'psycho_admin',
     'puckle-knuck',
     'QuazeiM',
     'Roadside-Strelok',
+    'VagueMountain',
     'WEVP_TV',
     'WhoStoleMyBurger'
 ]
