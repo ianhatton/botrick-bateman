@@ -222,13 +222,22 @@ const specificReplies = {
 }
 
 const ignoredUsers = [
+    '946Designs',
     'botrickbateman',
+    'cahutchins',
     'ChoiceD',
     'CocoCapitan',
     'connor_lassiter',
+    'craash420',
     'cyanocobalamin',
     'cystin',
     'Faile486',
+    'Fandomjunkie2004',
+    'hugs_nt_drugs',
+    'InfoDealer',
+    'justsayinyall11',
+    'LadyChickenFingers',
+    'LadyNorbert',
     'LordBottlecap',
     'MajorasGhot',
     'methodwriter85',
@@ -239,10 +248,16 @@ const ignoredUsers = [
     'psycho_admin',
     'puckle-knuck',
     'QuazeiM',
+    'reggie-drax',
     'Roadside-Strelok',
+    'Sisiwakanamaru',
+    'travail_cf',
+    'TypicalPlant',
+    'UpsetFawn',
     'VagueMountain',
     'WEVP_TV',
-    'WhoStoleMyBurger'
+    'WhoStoleMyBurger',
+    'wolffstarr'
 ]
 
 const ignoredWords = [
