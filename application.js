@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+let blockedUsers;
+
 const express = require('express'),
       app = express(),
       path = require('path'),
@@ -35,6 +37,10 @@ const generalReplies = [
     'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.',
     'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
 ];
+
+const getBlockedUsers = snoowrap.getBlockedUsers();
+
+const getUnreadMessages = snoowrap.getUnreadMessages();
 
 const specificReplies = {
     'bad bot': [
@@ -221,53 +227,6 @@ const specificReplies = {
     ]
 }
 
-const ignoredUsers = [
-    '946Designs',
-    'botrickbateman',
-    'cahutchins',
-    'ChoiceD',
-    'CocoCapitan',
-    'connor_lassiter',
-    'craash420',
-    'cyanocobalamin',
-    'cystin',
-    'DarthZionn',
-    'elasticbuttreduce',
-    'Faile486',
-    'Fandomjunkie2004',
-    'hugs_nt_drugs',
-    'InfoDealer',
-    'Judman13',
-    'justsayinyall11',
-    'Kittenngnot',
-    'LadyChickenFingers',
-    'LadyNorbert',
-    'Lattes1',
-    'leea0526',
-    'LordBottlecap',
-    'MajorasGhot',
-    'methodwriter85',
-    'Mouthtrap',
-    'msdlp',
-    'pixar_is_awesome',
-    'potatosaurus',
-    'preemptivemeasures',
-    'psycho_admin',
-    'puckle-knuck',
-    'QuazeiM',
-    'reggie-drax',
-    'Roadside-Strelok',
-    'Sisiwakanamaru',
-    'travail_cf',
-    'TypicalPlant',
-    'UpsetFawn',
-    'VagueMountain',
-    'WEVP_TV',
-    'WhoStoleMyBurger',
-    'wolffstarr',
-    'xmonster'
-]
-
 const ignoredWords = [
     'american psychological',
     'american psychologists',
@@ -322,7 +281,7 @@ const postReply = (comment, reply) => {
 }
 
 const readComment = (comment) => {
-    if (ignoredUsers.includes(comment.author.name)) {
+    if (comment.author.name === 'botrickbateman' || blockedUsers.includes(comment.author.name)) {
         return;
     }
 
@@ -346,7 +305,7 @@ const readComment = (comment) => {
 };
 
 const readSubmission = (submission) => {
-    if (ignoredUsers.includes(submission.author.name)) {
+    if (submission.author.name === 'botrickbateman' || blockedUsers.includes(submission.author.name)) {
         return;
     }
 
@@ -371,6 +330,12 @@ const readSubmission = (submission) => {
 };
 
 const readUnreadMessage = (message) => {
+    if (message.subject.toLowerCase().includes('opt out')) {
+        message.blockAuthor();
+
+        return;
+    }
+
     for (let key of Object.keys(specificReplies)) {
         if (message.body.toLowerCase().includes(key)) {
             // TODO: Check if a person was mentioned
@@ -399,6 +364,12 @@ app.listen(port, () => {
     console.log(`Our app is running on port ${port}`);
 });
 
+getBlockedUsers.then(users => {
+    blockedUsers = users.map(user => {
+        return user.name;
+    });
+});
+
 comments.on('comment', comment => {
     readComment(comment);
 });
@@ -408,9 +379,13 @@ submissions.on('submission', submission => {
 });
 
 setInterval(() => {
-    const getUnreadMessages = snoowrap.getUnreadMessages();
+    getBlockedUsers.then(users => {
+        blockedUsers = users.map(user => {
+            return user.name;
+        });
+    });
 
-    getUnreadMessages.then((messages) => {
+    getUnreadMessages.then(messages => {
         messages.forEach(message => {
             readUnreadMessage(message);
             snoowrap.markMessagesAsRead([message.name]);
