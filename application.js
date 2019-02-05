@@ -231,19 +231,26 @@ const ignoredUsers = [
     'craash420',
     'cyanocobalamin',
     'cystin',
+    'DarthZionn',
+    'elasticbuttreduce',
     'Faile486',
     'Fandomjunkie2004',
     'hugs_nt_drugs',
     'InfoDealer',
+    'Judman13',
     'justsayinyall11',
+    'Kittenngnot',
     'LadyChickenFingers',
     'LadyNorbert',
+    'Lattes1',
+    'leea0526',
     'LordBottlecap',
     'MajorasGhot',
     'methodwriter85',
     'Mouthtrap',
     'msdlp',
     'pixar_is_awesome',
+    'potatosaurus',
     'preemptivemeasures',
     'psycho_admin',
     'puckle-knuck',
@@ -257,7 +264,8 @@ const ignoredUsers = [
     'VagueMountain',
     'WEVP_TV',
     'WhoStoleMyBurger',
-    'wolffstarr'
+    'wolffstarr',
+    'xmonster'
 ]
 
 const ignoredWords = [
