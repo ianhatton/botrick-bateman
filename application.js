@@ -38,10 +38,6 @@ const generalReplies = [
     'On the way back to my apartment I stop at D’Agostino’s, where for dinner I buy two large bottles of Perrier, a six-pack of Coke Classic, a head of arugula, five medium-sized kiwis, a bottle of tarragon balsamic vinegar, a tin of crême fraiche, a carton of microwave tapas, a box of tofu and a white-chocolate candy bar I pick up at the checkout counter.'
 ];
 
-const getBlockedUsers = snoowrap.getBlockedUsers();
-
-const getUnreadMessages = snoowrap.getUnreadMessages();
-
 const specificReplies = {
     'bad bot': [
         'I’m sorry I insulted the pizzas at Pastels. Happy?'
@@ -108,6 +104,9 @@ const specificReplies = {
         'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
     ],
     'good bot': [
+        'Your compliment was sufficient.'
+    ],
+    'great bot': [
         'Your compliment was sufficient.'
     ],
     'gym': [
@@ -364,31 +363,27 @@ app.listen(port, () => {
     console.log(`Our app is running on port ${port}`);
 });
 
-getBlockedUsers.then(users => {
+snoowrap.getBlockedUsers().then(users => {
     blockedUsers = users.map(user => {
         return user.name;
     });
-});
 
-comments.on('comment', comment => {
-    readComment(comment);
-});
-
-submissions.on('submission', submission => {
-    readSubmission(submission);
-});
-
-setInterval(() => {
-    getBlockedUsers.then(users => {
-        blockedUsers = users.map(user => {
-            return user.name;
-        });
+    comments.on('comment', comment => {
+        readComment(comment);
     });
-
-    getUnreadMessages.then(messages => {
-        messages.forEach(message => {
-            readUnreadMessage(message);
-            snoowrap.markMessagesAsRead([message.name]);
-        });
+    
+    submissions.on('submission', submission => {
+        readSubmission(submission);
     });
-}, 300000);
+    
+    setInterval(() => {
+        const getUnreadMessages = snoowrap.getUnreadMessages();
+
+        getUnreadMessages.then(messages => {
+            messages.forEach(message => {
+                readUnreadMessage(message);
+                snoowrap.markMessagesAsRead([message.name]);
+            });
+        });
+    }, 300000);
+});
