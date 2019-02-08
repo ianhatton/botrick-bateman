@@ -42,9 +42,6 @@ const specificReplies = {
     'bad bot': [
         'I’m sorry I insulted the pizzas at Pastels. Happy?'
     ],
-    'beatles': [
-        'When I’m moving down Broadway to meet Jean, my secretary, for brunch, in front of Tower Records a college student with a clipboard asks me to name the saddest song I know. I tell him, without pausing, “You Can’t Always Get What You Want” by the Beatles. Then he asks me to name the happiest song I know, and I say “Brilliant Disguise” by Bruce Springsteen.'
-    ],
     'best bot': [
         'Your compliment was sufficient.'
     ],
@@ -58,9 +55,6 @@ const specificReplies = {
     ],
     'cologne': [
         'You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin.'
-    ],
-    'courtney': [
-        'She’s wearing a Krizia cream silk blouse, a Krizia rust tweed skirt and silk-satin d’Orsay pumps from Manolo Blahnik.'
     ],
     'dorsia': [
         '“Dorsia is... fine,” I say casually, picking up the phone, and with a trembling finger very quickly dial the seven dreaded numbers, trying to remain cool. Instead of the busy signal I’m expecting, the phone actually rings at Dorsia and after two rings the same harassed voice I’ve grown accustomed to for the past three months answers, shouting out, “Dorsia, yes?” the room behind the voice a deafening hum.\n\n“Yes, can you take two tonight, oh, let’s say, in around twenty minutes?” I ask, checking my Rolex, offering Jean a wink. She seems impressed.\n\n“We are totally booked,” the maître d’ shouts out smugly.\n\n“Oh, really?” I say, trying to look pleased, on the verge of vomiting. “That’s great.”\n\n“I said we are totally booked,” he shouts.\n\n“Two at nine?” I say. “Perfect.”\n\n“There are no tables available tonight,” the maître d’, unflappable, drones. “The waiting list is also totally booked.” He hangs up.\n\n“See you then.” I hang up too, and with a smile that tries its best to express pleasure at her choice, I find myself fighting for breath, every muscle tensed sharply.',
@@ -127,8 +121,20 @@ const specificReplies = {
     'i love you': [
         'Your compliment was sufficient.'
     ],
-    'mcdermott': [
-        'McDermott is wearing a woven-linen suit with pleated trousers, a button-down cotton and linen shirt by Basile, a silk tie by Joseph Abboud and ostrich loafers from Susan Bennis Warren Edwards.'
+    'listening': [
+        'A cover band plays lame versions of old Motown hits from the sixties.',
+        'Deck Chairs is crowded, earsplitting, the acoustics lousy because of the high ceilings, and if I’m not mistaken, accompanying the din is a New Age version of “White Rabbit” blaring from speakers mounted in the ceiling corners.',
+        'Frank Sinatra is somewhere, singing “Witchcraft.”',
+        'I move away from the bar and decide to check out the club’s other areas, expecting Patricia to follow but she doesn’t. No one guards the stairs that lead to the basement and as I step down them the music from upstairs changes, melds itself into Belinda Carlisle singing “I Feel Free.”',
+        'I think it’s called ‘Heaven Is a Place on Earth.’',
+        'Now the Shirelles are coming out of the speakers, “Dancing in the Street,” and the sound system plus the acoustics, because of the restaurant’s high ceiling, are so loud that we have to practically scream out our order to the hardbody waitress.',
+        'I walk back to my place and say good night to a doorman I don’t recognize (he could be anybody) and then dissolve into my living room high above the city, the sounds of the Tokens singing “The Lion Sleeps Tonight” coming from the glow of the Wurlitzer 1015 jukebox (which is not as good as the hard-to-find Wurlitzer 850) that stands in the comer of the living room.',
+        'The band segues into a rousing version of “Life in the Fast Lane” and I start looking around for hardbodies.',
+        'The club is air-conditioned and cool, the music from the light jazz band drifts through the half-empty room,',
+        'The jukebox plays Frankie Valli singing “The Worst That Could Happen”.',
+        'The Ronettes are singing “Then He Kissed Me,” our waitress is a little hardbody and even Price seems relaxed though he hates the place.',
+        'The music has changed; instead of Belinda Carlisle singing “I Feel Free” it’s some black guy *rapping*, if I’m hearing this correctly, something called “Her Shit on His Dick” and I sidle up to a couple of hardbody rich girls, both of them wearing skanky Betsey Johnson-type dresses, and I’m wired beyond belief and I start off with a line like “Cool music—haven’t I seen you at Salomon Brothers?” and one of them, one of these girls, sneers and says, “Go back to Wall Street,” and the one with the *nose ring* says, “Fucking yuppie.”',
+        'While waiting on the couch in the living room, the Wurlitzer jukebox playing “Cherish” by the Lovin Spoonful, I come to the conclusion that Patricia is safe tonight.'
     ],
     'overnight bag?': [
         'Jean-Paul Gaultier.'
@@ -150,28 +156,11 @@ const specificReplies = {
         '*The Patty Winters Show* this morning was Aspirin: Can It Save Your Life?',
         '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?'
     ],
-    'pizza': [
-        'You can’t stay angry at me because I think the pizza at Pastels is... crusty.'
-    ],
-    'preston': [
-        'Preston is wearing a double-breasted wool suit by Alexander Julian, a cotton shirt and a silk Perry Ellis tie.'
-    ],
-    'price': [
-        'He’s wearing a linen suit by Canali Milano, a cotton shirt by Ike Behar, a silk tie by Bill Blass and cap-toed leather lace-ups from Brooks Brothers.',
-        'Price is wearing a six-button wool and silk suit by Ermenegildo Zegna, a cotton shirt with French cuffs by Ike Behar, a Ralph Lauren silk tie and leather wing tips by Fratelli Rossetti.'
-    ],
     'rain coat?': [
         'Yes it is!'
     ],
     'routine': [
         'In bed I’m wearing Ralph Lauren silk pajamas and when I get up I slip on a paisley ancient madder robe and walk to the bathroom. I urinate while trying to make out the puffiness of my reflection in the glass that encases a baseball poster hung above the toilet. After I change into Ralph Lauren monogrammed boxer shorts and a Fair Isle sweater and slide into silk polka-dot Enrico Hidolin slippers I tie a plastic ice pack around my face and commence with the morning’s stretching exercises. Afterwards I stand in front of a chrome and acrylic Washmobile bathroom sink—with soap dish, cup holder, and railings that serve as towel bars, which I bought at Hastings Tile to use while the marble sinks I ordered from Finland are being sanded—and stare at my reflection with the ice pack still on. I pour some Plax antiplaque formula into a stainless-steel tumbler and swish it around my mouth for thirty seconds. Then I squeeze Rembrandt onto a faux-tortoiseshell toothbrush and start brushing my teeth (too hung over to floss properly—but maybe I flossed before bed last night?) and rinse with Listerine. Then I inspect my hands and use a nailbrush. I take the ice-pack mask off and use a deep-pore cleanser lotion, then an herb-mint facial masque which I leave on for ten minutes while I check my toenails. Then I use the Probright tooth polisher and next the Interplak tooth polisher (this in addition to the toothbrush) which has a speed of 4200 rpm and reverses direction forty-six times per second; the larger tufts clean between teeth and massage the gums while the short ones scrub the tooth surfaces. I rinse again, with Cepacol. I wash the facial massage off with a spearmint face scrub. The shower has a universal all-directional shower head that adjusts within a thirty-inch vertical range. It’s made from Australian gold-black brass and covered with a white enamel finish. In the shower I use first a water-activated gel cleanser, then a honey-almond body scrub, and on the face an exfoliating gel scrub. Vidal Sassoon shampoo is especially good at getting rid of the coating of dried perspiration, salts, oils, airborne pollutants and dirt that can weigh down hair and flatten it to the scalp which can make you look older. The conditioner is also good—silicone technology permits conditioning benefits without weighing down the hair which can also make you look older. On weekends or before a date I prefer to use the Greune Natural Revitalizing Shampoo, the conditioner and the Nutrient Complex. These are formulas that contain D-panthenol, a vitamin-B-complex factor; polysorbate 80, a cleansing agent for the scalp; and natural herbs. Over the weekend I plan to go to Bloomingdale’s or Bergdorf’s and on Evelyn’s advice pick up a Foltene European Supplement and Shampoo for thinning hair which contains complex carbohydrates that penetrate the hair shafts for improved strength and shine. Also the Vivagen Hair Enrichment Treatment, a new Redken product that prevents mineral deposits and prolongs the life cycle of hair. Luis Carruthers recommended the Aramis Nutriplexx system, a nutrient complex that helps increase circulation. Once out of the shower and toweled dry I put the Ralph Lauren boxers back on and before applying the Mousse A Raiser, a shaving cream by Pour Hommes, I press a hot towel against my face for two minutes to soften abrasive beard hair. Then I always slather on a moisturizer (to my taste, Clinique) and let it soak in for a minute. You can rinse it off or keep it on and apply a shaving cream over it—preferably with a brush, which softens the beard as it lifts the whiskers—which I’ve found makes removing the hair easier. It also helps prevent water from evaporating and reduces friction between your skin and the blade. Always wet the razor with warm water before shaving and shave in the direction the beard grows, pressing gently on the skin. Leave the sideburns and chin for last, since these whiskers are tougher and need more time to soften. Rinse the razor and shake off any excess water before starting. Afterwards splash cool water on the face to remove any trace of lather. You should use an aftershave lotion with little or no alcohol. Never use cologne on your face, since the high alcohol content dries your face out and makes you look older. One should use an alcohol-free antibacterial toner with a water-moistened cotton ball to normalize the skin. Applying a moisturizer is the final step. Splash on water before applying an emollient lotion to soften the skin and seal in the moisture. Next apply Gel Appaisant, also made by Pour Hommes, which is an excellent, soothing skin lotion. If the face seems dry and flaky—which makes it look dull and older—use a clarifying lotion that removes flakes and uncovers fine skin (it can also make your tan look darker). Then apply an anti-aging eye balm (Baume Des Yeux) followed by a final moisturizing “protective” lotion. A scalpprogramming lotion is used after I towel my hair dry. I also lightly blow-dry the hair to give it body and control (but without stickiness) and then add more of the lotion, shaping it with a Kent natural-bristle brush, and finally slick it back with a wide-tooth comb. I pull the Fair Isle sweater back on and reslip my feet into the polka-dot silk slippers, then head into the living room and put the new Talking Heads in the CD player, but it starts to digitally skip so I take it out and put in a CD laser lens cleaner.'
-    ],
-    'secretary': [
-        'Jean, my secretary who is in love with me, walks into my office without buzzing, announcing that I have a very important company meeting to attend at eleven.',
-        'My secretary, Jean, who is in love with me and who I will probably end up marrying, sits at her desk and this morning, to get my attention as usual, is wearing something improbably expensive and completely inappropriate: a Chanel cashmere cardigan, a cashmere crewneck and a cashmere scarf, faux-pearl earrings, wool-crepe pants from Barney’s.'
-    ],
-    'stash': [
-        'I can’t tell what Stash is wearing since it’s all black.'
     ],
     'tapes': [
         'I forgot to return my videotapes to the store tonight and I curse myself silently while Scott orders two large bottles of San Pellegrino.',
@@ -180,9 +169,6 @@ const specificReplies = {
         '“I’ve gotta return some videotapes,” I say, jabbing at the elevator button, then, my patience shot, I start to walk away and head back toward my table.',
         'My VideoVisions membership costs only two hundred and fifty dollars annually.',
         'Unable to linger since there are things to be done today: return videotapes, work out at the gym, a new British musical on Broadway I promised Jeanette I’d take her to, a dinner reservation to be made somewhere.'
-    ],
-    'van patten': [
-        'Van Patten is wearing a double-breasted wool and silk sport coat, button-fly wool and silk trousers with inverted pleats by Mario Valentino, a cotton shirt by Gitman Brothers, a polka-dot silk tie by Bill Blass and leather shoes from Brooks Brothers.'
     ],
     'video': [
         'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
@@ -233,20 +219,10 @@ const ignoredWords = [
     'american psychosis'
 ]
 
-const people = [
-    'courtney',
-    'evelyn',
-    'mcdermott',
-    'preston',
-    'price',
-    'stash',
-    'van patten',
-    'waitress'
-]
-
 const signatures = [
     '*Bot. Ask me how I got on at the gym today.*',
     '*Bot. Ask me how I’m feeling.*',
+    '*Bot. Ask me what I’m listening to.*',
     '*Bot. Ask me what I’m wearing.*',
     '*Bot. Ask me what was on the Patty Winters Show this morning.*'
 ]
@@ -337,15 +313,6 @@ const readUnreadMessage = (message) => {
 
     for (let key of Object.keys(specificReplies)) {
         if (message.body.toLowerCase().includes(key)) {
-            // TODO: Check if a person was mentioned
-            // if (key === 'wearing') {
-            //     const reply = getRandomArrayValue(specificReplies[key]);
-
-            //     postReply(message, reply);
-
-            //     break;
-            // }
-
             const reply = getRandomArrayValue(specificReplies[key]);
 
             postReply(message, reply);
