@@ -156,7 +156,10 @@ const specificReplies = {
         '*The Patty Winters Show* this morning was Aspirin: Can It Save Your Life?',
         '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?'
     ],
-    'rain coat?': [
+    'rain coat': [
+        'Yes it is!'
+    ],
+    'raincoat': [
         'Yes it is!'
     ],
     'routine': [
