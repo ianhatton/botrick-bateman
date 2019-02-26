@@ -62,7 +62,7 @@ const specificReplies = {
         'I looked up from the monitor, lowering my Wayfarer aviator sunglasses, and stared at Jean, then lightly fingered the Zagat guide that sat next to the monitor. Pastels would be impossible. Ditto Dorsia. Last time I called Dorsia someone had actually hung up on me even before I asked, “Well, if not next month, how about January?” and though I have vowed to get a reservation at Dorsia one day (if not during this calendar year, then at least before I’m thirty), the energy I would spend attempting this feat isn’t worth wasting on Sean. Besides, Dorsia’s far too chic for him.',
         'I stop looking through the Zagat guide and without glancing up, smiling tightly, stomach dropping, I silently ask myself, Do I really want to say no? Do I really want to say I can’t possibly get us in? Is that what I’m really prepared to do? Is that what I really want to do?',
         'Later. Dorsia, nine-thirty: Sean is half an hour late. The maître d’ refuses to seat me until my brother arrives. My worst fear—a reality. A prime booth across from the bar sits there, empty, waiting for Sean to grace it with his presence. My rage is controlled, barely, by a Xanax and an Absolut on the rocks.',
-        'My priorities before Christmas include the following: (1) to get an eight o’clock reservation on a Friday night at Dorsia with Courtney, (2z) to get myself invited to the Trump Christmas party aboard their yacht, (3) to find out as much as humanly possible about Paul Owen’s mysterious Fisher account, (4) to saw a hardbody’s head off and Federal Express it to Robin Barker—the dumb bastard—over at Salomon Brothers and (5) to apologize to Evelyn without making it look like an apology.',
+        'My priorities before Christmas include the following: (1) to get an eight o’clock reservation on a Friday night at Dorsia with Courtney, (2) to get myself invited to the Trump Christmas party aboard their yacht, (3) to find out as much as humanly possible about Paul Owen’s mysterious Fisher account, (4) to saw a hardbody’s head off and Federal Express it to Robin Barker—the dumb bastard—over at Salomon Brothers and (5) to apologize to Evelyn without making it look like an apology.',
         'Sean calls at five from the Racquet Club and tells me to meet him at Dorsia tonight. He just talked to Brin, the owner, and reserved a table at nine. My mind is a mess. I don’t know what to think or how to feel.'
     ],
     'drink': [
@@ -130,7 +130,7 @@ const specificReplies = {
         'Now the Shirelles are coming out of the speakers, “Dancing in the Street,” and the sound system plus the acoustics, because of the restaurant’s high ceiling, are so loud that we have to practically scream out our order to the hardbody waitress.',
         'I walk back to my place and say good night to a doorman I don’t recognize (he could be anybody) and then dissolve into my living room high above the city, the sounds of the Tokens singing “The Lion Sleeps Tonight” coming from the glow of the Wurlitzer 1015 jukebox (which is not as good as the hard-to-find Wurlitzer 850) that stands in the comer of the living room.',
         'The band segues into a rousing version of “Life in the Fast Lane” and I start looking around for hardbodies.',
-        'The club is air-conditioned and cool, the music from the light jazz band drifts through the half-empty room,',
+        'The club is air-conditioned and cool, the music from the light jazz band drifts through the half-empty room.',
         'The jukebox plays Frankie Valli singing “The Worst That Could Happen”.',
         'The Ronettes are singing “Then He Kissed Me,” our waitress is a little hardbody and even Price seems relaxed though he hates the place.',
         'The music has changed; instead of Belinda Carlisle singing “I Feel Free” it’s some black guy *rapping*, if I’m hearing this correctly, something called “Her Shit on His Dick” and I sidle up to a couple of hardbody rich girls, both of them wearing skanky Betsey Johnson-type dresses, and I’m wired beyond belief and I start off with a line like “Cool music—haven’t I seen you at Salomon Brothers?” and one of them, one of these girls, sneers and says, “Go back to Wall Street,” and the one with the *nose ring* says, “Fucking yuppie.”',
@@ -216,10 +216,12 @@ const specificReplies = {
 }
 
 const ignoredWords = [
+    'american psychoanalytic',
     'american psychological',
-    'american psychologists',
+    'american psychologist',
     'american psychology',
-    'american psychosis'
+    'american psychosis',
+    'american psychotherapy'
 ]
 
 const signatures = [
