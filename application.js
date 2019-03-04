@@ -39,9 +39,6 @@ const generalReplies = [
 ];
 
 const specificReplies = {
-    'bad bot': [
-        'I’m sorry I insulted the pizzas at Pastels. Happy?'
-    ],
     'best bot': [
         'Your compliment was sufficient.'
     ],
