@@ -92,7 +92,10 @@ const specificReplies = {
         'I feel sick and broken, tortured, really on the brink.',
         'I feel sick, my chest and back covered with sweat, drenched, it seems, instantaneously.',
         'I’m laughing still, but I’m also very dizzy.',
-        'I’m sweaty and a pounding migraine thumps dully in my head and I’m experiencing a major-league anxiety attack, searching my pockets for Valium, Xanax, a leftover Halcion, anything, and all I find are three faded Nuprin in a Gucci pillbox, so I pop all three into my mouth and swallow them down with a Diet Pepsi and I couldn’t tell you where it came from if my life depended on it.'
+        'I’m sweaty and a pounding migraine thumps dully in my head and I’m experiencing a major-league anxiety attack, searching my pockets for Valium, Xanax, a leftover Halcion, anything, and all I find are three faded Nuprin in a Gucci pillbox, so I pop all three into my mouth and swallow them down with a Diet Pepsi and I couldn’t tell you where it came from if my life depended on it.',
+        'It has been a *very* unstable week for me—I found myself sobbing during an episode of *Alf* on Monday',
+        'My chest feels like ice.',
+        'There’s no use in denying it: this has been a bad week. I’ve started drinking my own urine. I laugh spontaneously at nothing. Sometimes I sleep under my futon. I’m flossing my teeth constantly until my gums are aching and my mouth tastes like blood.'
     ],
     'genesis': [
         'I’ve been a big Genesis fan ever since the release of their 1980 album, *Duke*.'
@@ -105,6 +108,7 @@ const specificReplies = {
     ],
     'gym': [
         'After getting dressed and putting my Walkman on, clipping its body to the Lycra shorts and placing the phones over my ears, a Stephen Bishop/Christopher Cross compilation tape Todd Hunter made for me, I check myself in the mirror before entering the gym and, dissatisfied, go back to my briefcase for some mousse to slick my hair back and then I use a moisturizer and, for a small blemish I notice under my lower lip, a dab of Clinique Touch-Stick. Satisfied, I turn the Walkman on, the volume up, and leave the locker room.',
+        'Free weights and Nautilus equipment relieve stress. My body responds to the workout accordingly. Shirtless, I scrutinize my image in the mirror above the sinks in the locker room at Xclusive. My arm muscles burn; my stomach is as taut as possible, my chest steel, pectorals granite hard, my eyes white as ice.',
         'I screened calls all morning long in my apartment, taking none of them, glaring tiredly at a cordless phone while sipping cup after cup of decaf herbal tea. Afterwards I went to the gym, where I worked out for two hours; then I had lunch at the Health Bar and could barely eat half of an endive-with-carrot-dressing salad I ordered.',
         'I spent two hours at the gym today and can now complete two hundred abdominal crunches in less than three minutes.',
         'I worked out at Xclusive for two hours this morning.',
@@ -140,12 +144,15 @@ const specificReplies = {
         'Jean-Paul Gaultier.'
     ],
     'patty': [
+        'Bigfoot was interviewed on *The Patty Winters Show* this morning and to my shock I found him surprisingly articulate and charming.',
+        'On *The Patty Winters Show* this morning a Cheerio sat in a very small chair and was interviewed for close to an hour.',
         'On *The Patty Winters Show* this morning the topic was Beautiful Teenage Lesbians, which I found so erotic I had to stay home, miss a meeting, jerk off twice.',
         'Talking animals were the topic of this morning’s *Patty Winters Show*. An octopus was floating in a makeshift aquarium with a microphone attached to one of its tentacles and it kept asking—or so its “trainer,” who is positive that mollusks have vocal cords, assured us—for “cheese.” I watched, vaguely transfixed, until I started to sob.',
         '*The Patty Winters Show* this morning was about a boy who fell in love with a box of soap.',
         '*The Patty Winters Show* this morning was about a new sport called Dwarf Tossing.',
         '*The Patty Winters Show* this morning was about Aerobic Exercise.',
         '*The Patty Winters Show* this morning was about Nazis and, inexplicably, I got a real charge out of watching it. Though I wasn’t exactly charmed by their deeds, I didn’t find them unsympathetic either, nor I might add did most of the members of the audience. One of the Nazis, in a rare display of humor, even juggled grapefruits and, delighted, I sat up in bed and clapped.',
+        '*The Patty Winters Show* this morning was about people with half their brains removed.',
         '*The Patty Winters Show* this morning was about Perfumes and Lipsticks and Makeups.',
         '*The Patty Winters Show* this morning was about Real-Life Rambos.',
         '*The Patty Winters Show* this morning was about Salad Bars.',
