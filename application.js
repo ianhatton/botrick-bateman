@@ -142,10 +142,13 @@ const specificReplies = {
     ],
     'patty': [
         'Bigfoot was interviewed on *The Patty Winters Show* this morning and to my shock I found him surprisingly articulate and charming.',
+        'Doormen from Nell’s: Where Are They Now?',
         'On *The Patty Winters Show* this morning a Cheerio sat in a very small chair and was interviewed for close to an hour.',
         'On *The Patty Winters Show* this morning the topic was Beautiful Teenage Lesbians, which I found so erotic I had to stay home, miss a meeting, jerk off twice.',
+        'On *The Patty Winters Show* this morning were descendants of members of the Donner Party',
         'Talking animals were the topic of this morning’s *Patty Winters Show*. An octopus was floating in a makeshift aquarium with a microphone attached to one of its tentacles and it kept asking—or so its “trainer,” who is positive that mollusks have vocal cords, assured us—for “cheese.” I watched, vaguely transfixed, until I started to sob.',
         '*The Patty Winters Show* this morning was about a boy who fell in love with a box of soap.',
+        '*The Patty Winters Show* this morning was about a machine that lets people talk to the dead.',
         '*The Patty Winters Show* this morning was about a new sport called Dwarf Tossing.',
         '*The Patty Winters Show* this morning was about Aerobic Exercise.',
         '*The Patty Winters Show* this morning was about Nazis and, inexplicably, I got a real charge out of watching it. Though I wasn’t exactly charmed by their deeds, I didn’t find them unsympathetic either, nor I might add did most of the members of the audience. One of the Nazis, in a rare display of humor, even juggled grapefruits and, delighted, I sat up in bed and clapped.',
@@ -158,7 +161,9 @@ const specificReplies = {
         '*The Patty Winters Show* this morning was about UFOs That Kill.',
         '*The Patty Winters Show* today was—ironically, I thought—about Princess Di’s beauty tips.',
         '*The Patty Winters Show* this morning was Aspirin: Can It Save Your Life?',
-        '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?'
+        '*The Patty Winters Show* this morning was Has Patrick Swayze Become Cynical or Not?',
+        'This morning’s topic on *The Patty Winters Show* was People Who Weigh Over Seven Hundred Pounds—What Can We Do About Them?',
+        'Today’s topic was Does Economic Success Equal Happiness?'
     ],
     'rain coat': [
         'Yes it is!'
