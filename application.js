@@ -110,6 +110,11 @@ const specificReplies = {
     'i love you': [
         'Your compliment was sufficient.'
     ],
+    'i wearing': [
+        'You are wearing a jogging suit—from where, Bloomingdale’s?',
+        'You are wearing a sort of tacky wool jacket in a houndstooth check and an okay-looking shirt.',
+        'You are wearing some sort of weird, tacky, filthy green jump suit.'
+    ],
     'listening': [
         'A cover band plays lame versions of old Motown hits from the sixties.',
         'Deck Chairs is crowded, earsplitting, the acoustics lousy because of the high ceilings, and if I’m not mistaken, accompanying the din is a New Age version of “White Rabbit” blaring from speakers mounted in the ceiling corners.',
@@ -177,10 +182,12 @@ const specificReplies = {
         'The video store is more crowded than usual. There are too many couples in line for me to rent She-Male Reformatory or Ginger’s Cunt without some sense of awkwardness or discomfort, plus I’ve already bumped into Robert Ailes from First Boston in the Horror aisle, or at least I think it was Robert Ailes. He mumbled “Hello, McDonald” as he passed me by, holding Friday the 13th: Part 7 and a documentary on abortions in what I noticed were nicely manicured hands marred only by what looked to me like an imitation-gold Rolex.'
     ],
     'wearing': [
+        'Did I tell you I’m wearing sixty-dollar boxer shorts?',
         'Earlier in the evening I was wearing a suit tailored by Edward Sexton and thinking sadly about my family’s house in Newport.',
         'I am wearing a custom-made tweed jacket, pants and a cotton shirt from the Alan Flusser shop and a silk tie by Paul Stuart.',
         'I am wearing a mini-houndstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
-        'I’m loosening the tie I’m still wearing with a blood-soaked hand, breathing in deeply. ',
+        'I’m loosening the tie I’m still wearing with a blood-soaked hand, breathing in deeply.',
+        'I’m still wearing the bloody raincoat.',
         'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
         'I’m wearing a cashmere topcoat, a double-breasted plaid wool and alpaca sport coat, pleated wool trousers, patterned silk tie, all by Valentino Couture, and leather lace-ups by Allen-Edmonds.',
         'I’m wearing a double-breasted suit, a silk shirt with woven stripes, a patterned silk tie and leather slip-ons, all by Gianni Versace.',
