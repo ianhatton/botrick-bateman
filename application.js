@@ -290,7 +290,7 @@ const readComment = (comment) => {
 };
 
 const readSubmission = (submission) => {
-    if (submission.author.name === 'botrickbateman' || blockedUsers.includes(submission.author.name)) {
+    if (submission.author.name === 'botrickbateman' || blockedUsers.includes(submission.author.name) || submission.hidden) {
         return;
     }
 
@@ -308,6 +308,8 @@ const readSubmission = (submission) => {
             }
 
             postReply(submission, reply);
+
+            submission.hide();
 
             break;
         }
