@@ -25,7 +25,7 @@ const client = new Snoostorm(snoowrap),
       comments = client.CommentStream(streamOptions),
       submissions = client.SubmissionStream(streamOptions);
 
-const generalReplies = [
+const genericReplies = [
     'As I set the platter down I catch a glimpse of my reflection on the surface of the table. My skin seems darker because of the candlelight and I notice how good the haircut I got at Gio’s last Wednesday looks. I make myself another drink. I worry about the sodium level in the soy sauce.',
     'Before leaving my office for the meeting I take two Valium, wash them down with a Perrier and then use a scruffing cleanser on my face with premoistened cotton balls, afterwards applying a moisturizer.',
     '“Hi. Pat Bateman,” I say, offering my hand, noticing my reflection in a mirror hung on the wall—and smiling at how good I look.',
@@ -217,8 +217,16 @@ const specificReplies = {
         'The shoes I’m wearing are crocodile loafers by A. Testoni.',
         'The smock I’m supposed to have on is crumpled next to the shower stall since I want Helga to check my body out, notice my chest, see how fucking *buff* my abdominals have gotten since the last time I was here, even though she’s much older than I am—maybe thirty or thirtyfive—and there’s no way I’d ever fuck her. I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.',
         'Tonight I’m wearing a new wool topcoat by Ungaro Uomo Paris and carrying a Bottega Veneta briefcase and an umbrella by Georges Gaspar.'
+    ],
+    'year is it': [
+        'It is 1989.'
     ]
 }
+
+const ignoredSubs = [
+    'ecr_uk',
+    'officedepot'
+]
 
 const ignoredWords = [
     'american psychoanalytic',
@@ -248,6 +256,18 @@ const triggerWords = [
     'patrick bateman'
 ]
 
+const canReply = (post, type) => {
+    if (post.author.name !== 'botrickbateman' && !subIsUser(post.subreddit.display_name.toLowerCase()) && !ignoredSubs.includes(post.subreddit.display_name.toLowerCase()) && !blockedUsers.includes(post.author.name)) {
+        if (type === 'comment') {
+            return true
+        } else {
+            return !post.hidden ? true : false;
+        }
+    } else {
+        return false;
+    }
+}
+
 const getRandomArrayValue = (array) => {
     if (!array) {
         return;
@@ -266,7 +286,7 @@ const postReply = (comment, reply) => {
 }
 
 const readComment = (comment) => {
-    if (comment.author.name === 'botrickbateman' || blockedUsers.includes(comment.author.name)) {
+    if (!canReply(comment, 'comment')) {
         return;
     }
 
@@ -279,7 +299,7 @@ const readComment = (comment) => {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
-                reply = getRandomArrayValue(generalReplies);
+                reply = getRandomArrayValue(genericReplies);
             }
 
             postReply(comment, reply);
@@ -290,7 +310,7 @@ const readComment = (comment) => {
 };
 
 const readSubmission = (submission) => {
-    if (submission.author.name === 'botrickbateman' || blockedUsers.includes(submission.author.name) || submission.hidden) {
+    if (!canReply(submission, 'submission')) {
         return;
     }
 
@@ -304,7 +324,7 @@ const readSubmission = (submission) => {
             reply = getRandomArrayValue(specificReplies[triggerWord]);
 
             if (!reply) {
-                reply = getRandomArrayValue(generalReplies);
+                reply = getRandomArrayValue(genericReplies);
             }
 
             postReply(submission, reply);
@@ -333,6 +353,10 @@ const readUnreadMessage = (message) => {
         }
     }
 };
+
+const subIsUser = (subreddit) => {
+    return subreddit.indexOf('u_') === 0 ? true : false;
+}
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
