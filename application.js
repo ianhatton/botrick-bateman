@@ -212,6 +212,7 @@ const specificReplies = {
         'Earlier in the evening I was wearing a suit tailored by Edward Sexton and thinking sadly about my family’s house in Newport.',
         'I am wearing a custom-made tweed jacket, pants and a cotton shirt from the Alan Flusser shop and a silk tie by Paul Stuart.',
         'I am wearing a mini-houndstooth-check wool suit with pleated trousers by Hugo Boss, a silk tie, also by Hugo Boss, a cotton broadcloth shirt by Joseph Abboud and shoes from Brooks Brothers.',
+        'I go into the bedroom and take off what I was wearing today: a herringbone wool suit with pleated trousers by Ciorgio Correggiari, a cotton oxford shirt by Ralph Lauren, a knit tie from Paul Stuart and suede shoes from Cole-Haan. I slip on a pair of sixty-dollar boxer shorts I bought at Barney’s and do some stretching exercises, holding the phone, waiting for Patricia to call back. After ten minutes of stretching, the phone rings and I wait six rings to answer it.',
         'I’m loosening the tie I’m still wearing with a blood-soaked hand, breathing in deeply.',
         'I’m still wearing the bloody raincoat.',
         'I’m tense, my hair is slicked back, Wayfarers on, my skull is aching, I have a cigar—unlit—clenched between my teeth, am wearing a black Armani suit, a white cotton Armani shirt and a silk tie, also by Armani.',
@@ -247,6 +248,39 @@ const specificReplies = {
     ],
     'year is it': [
         'It is 1989.'
+    ],
+    'you doing': [
+        'I’m about to tell Owen that Cecelia, Marcus Halberstam’s girlfriend, has two vaginas and that we plan to wed next spring in East Hampton, but he interrupts.',
+        'I’m at a phone booth checking my messages, staring at my reflection in an antique store’s window. ',
+        'I’m imagining myself on television, in a commercial for a new product—wine cooler? tanning lotion? sugarless gum?—and I’m moving in jump-cut, walling along a beach, the film is black-and-white, purposefully scratched, eerie vague pop music from the mid-1960s accompanies the footage, it echoes, sounds as if it’s coming from a calliope. Now I’m looking into the camera, now I’m holding up the product—a new mousse? tennis shoes?—now my hair is windblown then it’s day then night then day again and then it’s night.',
+        'I’m in Courtney’s bed. Luis is in Atlanta. Courtney shivers, presses against me, relaxes. I roll off her onto my back, landing on something hard and covered with fur. I reach under myself to find a stuffed black cat with blue jewels for eyes that I think I spotted at F.A.O. Schwarz when I was doing some early Christmas shopping.',
+        'I’m in my bathroom, shirtless in front of the Orobwener mirror, debating whether to take a shower and wash my hair since it looks shitty due to the rain.',
+        'I’m in my office attempting yesterday’s *New York Times* Sunday crossword puzzle, listening to rap music on the stereo, trying to fathom its popularity.',
+        'I’m in the men’s room throwing up my lunch, spitting out the squid, undigested and less purple than it was on my plate.',
+        'I’m running down Broadway, then up Broadway, then down again, screaming like a banshee, my coat open, flying out behind me like some kind of cape.',
+        'I’m sipping a Diet Pepsi that Mario, the valet, brought me, with crushed ice in a glass on the side that I asked for but don’t want.',
+        'I’m sitting at the Palazzetti glass-top desk, staring into my monitor with my Ray-Bans on, chewing Nuprin, hung over from a coke binge that started innocently enough last night at Shout! with Charles Hamilton, Andrew Spencer and Chris Stafford and then moved on to the Princeton Club, progressed to Barcadia and ended at Nell’s around three-thirty, and though earlier this morning, while soaking in a bath, sipping a Stoli Bloody Mary after maybe four hours of sweaty, dreamless sleep, I realized that there *was* a meeting, I seemed to have forgotten about it on the cab ride downtown.',
+        'I’m sitting in a booth at Nell’s with Craig McDermott and Alex Taylor—who has just passed out—and three models from Elite: Libby, Daisy and Caron. It’s nearing summer, mid-May, but the club is air-conditioned and cool, the music from the light jazz band drifts through the half-empty room, ceiling fans are whirring, a crowd twenty deep waits outside in the rain, a surging mass.',
+        'I’m sitting in a chair, naked, covered with blood, watching HBO on Owen’s TV, drinking a Corona, complaining out loud, wondering why Owen doesn’t have Cinemax.',
+        'I’m sitting in DuPlex, the new Tony McManus restaurant in Tribeca, with Christopher Armstrong, who also works at P & P. We went to Exeter together, then he went to the University of Pennsylvania and Wharton, before moving to Manhattan. We, inexplicably, could not get reservations at Subjects, so Armstrong suggested this place. Armstrong is wearing a four-button double-breasted chalk-striped spread-collar cotton shirt by Christian Dior and a large paisley-patterned silk tie by Givenchy Gentleman. His leather agenda and leather envelope, both by Bottega Veneta, lie on the third chair at our table, a good one, up front by the window.',
+        'I’m trying to catch a glimpse of our hardbody waitress; she’s bending over to pick up a dropped napkin.',
+        'I’m wandering around VideoVisions, the video rental store near my apartment on the Upper West Side, sipping from a can of Diet Pepsi, the new Christopher Cross tape blaring from the earphones of my Sony Walkman.',
+        'Right now I’m in the middle of purchasing a belt—not for myself—as well as three ninety-dollar ties, ten handkerchiefs, a four-hundred-dollar robe and two pairs of Ralph Lauren pajamas, and I’m having it all mailed to my apartment except for the handkerchiefs, which I’m having monogrammed then sent to P & P.',
+        'Today I’m meeting Bethany for lunch at Vanities, the new Evan Kiley bistro in Tribeca, and though I worked out for nearly two hours this morning and even lifted weights in my office before noon, I’m still extremely nervous.'
+    ],
+    'you see': [
+        'Courtney Lawrence invites me out to dinner on Monday night and the invitation seems vaguely sexual so I accept, but part of the catch is that we have to endure dinner with two Camden graduates, Scott and Anne Smiley, at a new restaurant they chose on Columbus called Deck Chairs. She’s wearing a red, purple and black hand-knitted mohair and wool sweater from Koos Van Den Akker Couture and slacks from Anne Klein, with suede open-toe pumps.',
+        'From my POV Paul Owen sits at a table across the room with someone who looks a lot like Trent Moore, or Roger Daley, and some other guy who looks like Frederick Connell. Moore’s grandfather owns the company he works at. Trent is wearing a minihoundstooth-check worsted wool suit with multicolored overplaid.',
+        'It gets quieter as we move into the front hallway, heading toward the actual entrance, and we pass by three hardbodies. One is wearing a black side-buttoned notched-collar wool jacket, wool-crepe trousers and a fitted cashmere turtleneck, all by Oscar de la Renta; another is wearing a double-breasted coat of wool, mohair and nylon tweed, matching jeans-style pants and a man’s cotton dress shirt, all by Stephen Sprouse; the best-looking one is wearing a checked wool jacket and high-waisted wool skirt, both from Barney’s, and a silk blouse by Andra Gabrielle.',
+        'It’s the actor Tom Cruise, who lives in the penthouse, and as a courtesy, without asking him, I press the PH button and he nods thank you and keeps his eyes fixed on the numbers lighting up above the door in rapid succession. He is much shorter in person and he’s wearing the same pair of black Wayfarers I have on. He’s dressed in blue jeans, a white T-shirt, an Armani jacket.',
+        'Muldwyn Butner of Sachs, who I went to Exeter with, over at the biceps curl machine. Butner is wearing a pair of knee-length nylon and Lycra shorts with checkerboard inserts and a cotton and Lycra tank top and leather Reeboks.',
+        'No women anywhere, just an army of professionals from Wall Street in tuxedos. The one female spotted is dancing alone in a corner to some song I think is called “Love Triangle.” She’s wearing what looks like a sequined tank top by Ronaldus Shamask and I concentrate on that but I’m in an edgy pre-coke state and I start chewing nervously on a drink ticket and some Wall Street guy who looks like Boris Cunningham blocks my view of the girl.',
+        'Scott Montgomery walks over to our booth wearing a double-breasted navy blue blazer with mock-tortoiseshell buttons, a prewashed wrinkled-cotton striped dress shirt with red accent stitching, a red, white and blue fireworks-print silk tie by Hugo Boss and plum washed-wool trousers with a quadruple-pleated front and slashed pockets by Lazo. He’s holding a glass of champagne and hands it to the girl he’s with—definite model type, thin, okay tits, no ass, high heels—and she’s wearing a wool-crepe skirt and a wool and cashmere velour jacket and draped over her arm is a wool and cashmere velour coat, all by Louis Dell’Olio. High-heeled shoes by Susan Bennis Warren Edwards. Sunglasses by Alain Mikli. Pressed-leather bag from Hermès.',
+        'Someone who looks like Forrest Atwater—slicked-back blond hair, nonprescription redwood-framed glasses, Armani suit with suspenders—is sitting with Caroline Baker, an investment banker at Drexel, maybe, and she doesn’t look too good. She needs more makeup, the Ralph Lauren tweed outfit is too severe.',
+        'The basement has one couple in it who look like Sam and Ilene Sanford but it’s darker down here, *warmer*, and I could be wrong. I move past them as they stand by the bar drinking champagne and head over toward this extremely well-dressed Mexican-looking guy sitting on a couch. He’s wearing a double-breasted wool jacket and matching trousers by Mario Valentino, a cotton T-shirt by Agnes B. and leather slip-ons (no socks) by Susan Bennis Warren Edwards, and he’s with a goodlooking muscular Eurotrash chick—dirty blond, big tits, tan, no makeup, smoking Merit Ultra Lights—who has on a cotton gown with a zebra print by Patrick Kelly and silk and rhinestone high-heeled pumps.',
+        'The door to the private room opens and a girl I haven’t seen before walks in and through half-closed eyes I can see that she’s young, Italian, okay-looking. She smiles, sitting in a chair at my feet, and begins the pedicure. She switches off the ceiling light and except for strategically placed halogen bulbs shining down on my feet, hands and face, the room darkens, making it impossible to tell what kind of body she has, only that she’s wearing gray suede and black leather buttoned ankle boots by Maud Frizon.',
+        'The guy who I thought was Madison is greeted by two other guys in tuxedos and he turns his back to us and suddenly, behind Price, Ebersol wraps an arm around Timothy’s neck and laughingly pretends to strangle him, then Price pushes the arm away, shakes Ebersol’s hand and says, “Hey Madison.”\n\nMadison, who I thought was Ebersol, is wearing a splendid double-breasted white linen jacket by Hackett of London from Bergdorf Goodman. He has a cigar that hasn’t been lit in one hand and a champagne glass, half full, in the other.',
+        'There are four women at the table opposite ours, all great-looking—blond, big tits: one is wearing a chemise dress in double-faced wool by Calvin Klein, another is wearing a wool knit dress and jacket with silk faille bonding by Geoffrey Beene, another is wearing a symmetrical skirt of pleated tulle and an embroidered velvet bustier by, I think, Christian Lacroix plus high-heeled shoes by Sidonie Larizzi, and the last one is wearing a black strapless sequined gown under a wool crepe tailored jacket by Bill Blass.'
     ]
 }
 
@@ -268,9 +302,11 @@ const signatures = [
     '*Bot. Ask me how I got on at the gym today.*',
     '*Bot. Ask me how I’m feeling.*',
     '*Bot. Ask me if I’ve made any reservations.*',
+    '*Bot. Ask me what I’m doing.*',
     '*Bot. Ask me what I’m listening to.*',
     '*Bot. Ask me what I’m wearing.*',
-    '*Bot. Ask me what was on the Patty Winters Show this morning.*'
+    '*Bot. Ask me what was on the Patty Winters Show this morning.*',
+    '*Bot. Ask me who I can see.*'
 ]
 
 const triggerWords = [
@@ -416,5 +452,5 @@ snoowrap.getBlockedUsers().then(users => {
                 snoowrap.markMessagesAsRead([message.name]);
             });
         });
-    }, 300000);
+    }, 3000);
 });
