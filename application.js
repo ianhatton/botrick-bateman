@@ -452,5 +452,5 @@ snoowrap.getBlockedUsers().then(users => {
                 snoowrap.markMessagesAsRead([message.name]);
             });
         });
-    }, 3000);
+    }, 300000);
 });
