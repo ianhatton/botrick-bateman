@@ -285,7 +285,9 @@ const specificReplies = {
 }
 
 const ignoredSubs = [
+    'amex',
     'ecr_uk',
+    'fatfire',
     'officedepot'
 ]
 
